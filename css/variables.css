@@ -1,0 +1,37 @@
+/* بارگذاری فونت IRANYekanX */
+@font-face {
+  font-family: 'IRANYekanX';
+  src:
+    url('../assets/fonts/IRANYekanXVF.woff2') format('woff2-variations'),
+    url('../assets/fonts/IRANYekanX-Regular.woff2') format('woff2');
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+:root {
+  /* پالت رنگی دارک و اجرایی (Executive Dark Theme) */
+  --bg-primary: #07090e;
+  --bg-secondary: #0f1420;
+  --surface-glass: rgba(255, 255, 255, 0.03);
+  --surface-glass-hover: rgba(255, 255, 255, 0.06);
+  --border-glass: rgba(255, 255, 255, 0.08);
+  --border-highlight: rgba(61, 213, 152, 0.35);
+
+  /* رنگ‌های برند و تاکید (قابل شخصی‌سازی بر اساس برند شرکت) */
+  --accent-primary: #3dd598; /* سبز زمردی - دستاوردها و رشد */
+  --accent-secondary: #ff7722; /* نارنجی - نقاط کانونی و هایلایت */
+  --accent-blue: #3b82f6; /* آبی - زیرساخت و تکنولوژی */
+  --accent-purple: #8b5cf6; /* بنفش - دیزاین سیستم و خلاقیت */
+
+  /* تایپوگرافی */
+  --text-main: #f8fafc;
+  --text-muted: #94a3b8;
+  --text-dim: #64748b;
+  --font-main: 'IRANYekanX', system-ui, -apple-system, sans-serif;
+
+  /* انیمیشن و ابعاد */
+  --transition-smooth: all 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+  --radius-lg: 24px;
+  --radius-md: 16px;
+  --radius-sm: 10px;
+}

@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>گزارش دستاوردها و خلق ارزش تیم | ارائه مدیریتی</title>
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- نوار پیشرفت بالا -->
+    <div class="progress-bar" id="progressBar"></div>
+
+    <!-- نورپردازی پس‌زمینه -->
+    <div class="ambient-bg"></div>
+
+    <!-- کانتینر اسلایدها -->
+    <main class="deck-container">
+      <!-- ==================== SLIDE 1: کاور اصلی ==================== -->
+      <section class="slide active" data-slide="1">
+        <div class="slide-badge">✦ گزارش استراتژیک به مدیرعامل و معاونین</div>
+        <h1 class="slide-title">
+          مروری بر <span class="highlight">دستاوردها، زیرساخت‌ها</span><br />
+          و خلق ارزش تیم در سازمان
+        </h1>
+        <p class="slide-subtitle">
+          گزارش جامع عملکرد، بهینه‌سازی فرآیندها و تاثیر مستقیم خروجی‌های تیم بر
+          رشد محصولات و تجربه کاربری در یک نگاه.
+        </p>
+      </section>
+
+      <!-- ==================== SLIDE 2: خلاصه مدیریتی (نمونه) ==================== -->
+      <section class="slide" data-slide="2">
+        <div class="slide-badge">۰۱ / تصویر کلان (Executive Summary)</div>
+        <h2 class="slide-title">
+          تبدیل چالش‌ها به
+          <span class="highlight">دارایی‌های قابل اندازه‌گیری</span>
+        </h2>
+        <p class="slide-subtitle">
+          خلاصه‌ای از مهم‌ترین شاخص‌های عملکردی که با تمرکز بر سرعت، کیفیت و
+          استانداردسازی محقق شده‌اند:
+        </p>
+
+        <div class="grid-cards">
+          <div class="glass-card">
+            <div class="card-metric">+۱۲</div>
+            <div class="card-title">پروژه و محصول کلیدی</div>
+            <div class="card-desc">
+              طراحی، بازطراحی و بهینه‌سازی فلوهای حیاتی کسب‌وکار از ایده تا
+              تحویل نهایی.
+            </div>
+          </div>
+          <div class="glass-card">
+            <div class="card-metric">۴۰٪</div>
+            <div class="card-title">افزایش سرعت توسعه</div>
+            <div class="card-desc">
+              کاهش زمان طراحی تا کدنویسی به واسطه یکپارچه‌سازی دیزاین سیستم و
+              کامپوننت‌ها.
+            </div>
+          </div>
+          <div class="glass-card">
+            <div class="card-metric">۱۰۰٪</div>
+            <div class="card-title">هم‌راستایی با اهداف بیزینس</div>
+            <div class="card-desc">
+              ارتقای نرخ تبدیل و کاهش اصطکاک کاربران در نقاط تماس کلیدی محصولات.
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- داک کنترل پایین صفحه -->
+    <footer class="deck-controls">
+      <div class="control-group">
+        <button class="ctrl-btn" id="prevBtn" title="اسلاید قبلی (فلش راست)">
+          → قبلی
+        </button>
+        <span class="slide-counter" id="slideCounter">۱ از ۲</span>
+        <button
+          class="ctrl-btn"
+          id="nextBtn"
+          title="اسلاید بعدی (فلش چپ / Space)">
+          بعدی ←
+        </button>
+      </div>
+
+      <div class="control-group">
+        <button class="ctrl-btn" id="fullscreenBtn" title="تمام صفحه (کلید F)">
+          ⛶ تمام‌صفحه (F)
+        </button>
+      </div>
+    </footer>
+
+    <script src="js/engine.js"></script>
+  </body>
+</html>
