@@ -5,9 +5,21 @@ document.addEventListener('DOMContentLoaded', () => {
   const fullscreenBtn = document.getElementById('fullscreenBtn');
   const counterEl = document.getElementById('slideCounter');
   const progressBar = document.getElementById('progressBar');
+  const slideDotsContainer = document.getElementById('slideDots');
 
   let currentIndex = 0;
   const totalSlides = slides.length;
+
+  // ساخت نقاط ناوبری (Dots) با کلاس‌های Tailwind
+  slides.forEach((_, idx) => {
+    const dot = document.createElement('button');
+    dot.className = 'h-2 rounded-full transition-all duration-300 bg-white/20 hover:bg-primary-400 w-2';
+    dot.title = `اسلاید ${idx + 1}`;
+    dot.addEventListener('click', () => updateDeck(idx));
+    slideDotsContainer.appendChild(dot);
+  });
+
+  const dots = slideDotsContainer.querySelectorAll('button');
 
   function updateDeck(index) {
     if (index < 0 || index >= totalSlides) return;
@@ -17,33 +29,36 @@ document.addEventListener('DOMContentLoaded', () => {
       slide.classList.toggle('active', idx === currentIndex);
     });
 
-    // بروزرسانی شمارنده و نوار پیشرفت
-    counterEl.textContent = `${currentIndex + 1} از ${totalSlides}`;
+    // آپدیت نقطه‌های وضعیت
+    dots.forEach((dot, idx) => {
+      if (idx === currentIndex) {
+        dot.className = 'h-2 w-8 rounded-full transition-all duration-300 bg-primary-500 shadow-glow-primary';
+      } else {
+        dot.className = 'h-2 w-2 rounded-full transition-all duration-300 bg-white/20 hover:bg-white/40';
+      }
+    });
+
+    // شمارنده فارسی و نوار پیشرفت
+    const toPersianNum = (n) => n.toString().replace(/\d/g, d => '۰۱۲۳۴۵۶۷۸۹'[d]);
+    counterEl.textContent = `${toPersianNum(currentIndex + 1)} از ${toPersianNum(totalSlides)}`;
+    
     const progress = ((currentIndex + 1) / totalSlides) * 100;
     progressBar.style.width = `${progress}%`;
 
-    // ذخیره اسلاید فعلی در URL برای رفرش بدون پرش
     window.location.hash = `slide-${currentIndex + 1}`;
   }
 
-  function nextSlide() {
-    if (currentIndex < totalSlides - 1) updateDeck(currentIndex + 1);
-  }
+  const nextSlide = () => currentIndex < totalSlides - 1 && updateDeck(currentIndex + 1);
+  const prevSlide = () => currentIndex > 0 && updateDeck(currentIndex - 1);
 
-  function prevSlide() {
-    if (currentIndex > 0) updateDeck(currentIndex - 1);
-  }
-
-  // رویداد کلیک دکمه‌ها
   nextBtn.addEventListener('click', nextSlide);
   prevBtn.addEventListener('click', prevSlide);
 
-  // کنترل با کیبورد (فلش‌ها، اسپیس و کلید F برای تمام‌صفحه)
   document.addEventListener('keydown', (e) => {
-    if (e.key === 'ArrowLeft' || e.key === ' ' || e.key === 'PageDown') {
+    if (['ArrowLeft', ' ', 'PageDown'].includes(e.key)) {
       e.preventDefault();
-      nextSlide(); // در زبان فارسی جهت حرکت رو به جلو به سمت چپ است
-    } else if (e.key === 'ArrowRight' || e.key === 'PageUp') {
+      nextSlide();
+    } else if (['ArrowRight', 'PageUp'].includes(e.key)) {
       e.preventDefault();
       prevSlide();
     } else if (e.key.toLowerCase() === 'f') {
@@ -51,7 +66,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // قابلیت تمام‌صفحه برای زمان ارائه به مدیرعامل
   function toggleFullScreen() {
     if (!document.fullscreenElement) {
       document.documentElement.requestFullscreen();
@@ -62,14 +76,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   fullscreenBtn.addEventListener('click', toggleFullScreen);
 
-  // خواندن اسلاید از Hash در صورت رفرش صفحه
   const hash = window.location.hash.replace('#slide-', '');
   const initialSlide = parseInt(hash, 10);
-  if (
-    !isNaN(initialSlide) &&
-    initialSlide >= 1 &&
-    initialSlide <= totalSlides
-  ) {
+  if (!isNaN(initialSlide) && initialSlide >= 1 && initialSlide <= totalSlides) {
     updateDeck(initialSlide - 1);
   } else {
     updateDeck(0);

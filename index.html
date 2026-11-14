@@ -1,96 +1,1610 @@
-<!doctype html>
-<html lang="fa" dir="rtl">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>گزارش دستاوردها و خلق ارزش تیم | ارائه مدیریتی</title>
-    <link rel="stylesheet" href="css/variables.css" />
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
-  <body>
-    <!-- نوار پیشرفت بالا -->
-    <div class="progress-bar" id="progressBar"></div>
+<!DOCTYPE html>
+<html lang="fa" dir="rtl" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>گزارش دستاوردها و خلق ارزش تیم خلاقیت و طراحی محصول | ارائه مدیریتی</title>
 
-    <!-- نورپردازی پس‌زمینه -->
-    <div class="ambient-bg"></div>
+  <!-- ۱. بارگذاری Tailwind CSS و کانفیگ دیزاین سیستم (#00A693 & #FF8A34) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="tailwind.config.js"></script>
 
-    <!-- کانتینر اسلایدها -->
-    <main class="deck-container">
-      <!-- ==================== SLIDE 1: کاور اصلی ==================== -->
-      <section class="slide active" data-slide="1">
-        <div class="slide-badge">✦ گزارش استراتژیک به مدیرعامل و معاونین</div>
-        <h1 class="slide-title">
-          مروری بر <span class="highlight">دستاوردها، زیرساخت‌ها</span><br />
-          و خلق ارزش تیم در سازمان
-        </h1>
-        <p class="slide-subtitle">
-          گزارش جامع عملکرد، بهینه‌سازی فرآیندها و تاثیر مستقیم خروجی‌های تیم بر
-          رشد محصولات و تجربه کاربری در یک نگاه.
+  <!-- ۲. استایل‌های پایه و فونت متغیر IRANYekanXVF (ss02, ss03, ss04) -->
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+
+<body class="bg-surface-950 text-slate-100 font-sans overflow-hidden h-screen w-screen select-none antialiased relative">
+
+  <!-- ==================== نوار پیشرفت نئونی بالا ==================== -->
+  <div class="fixed top-0 right-0 left-0 h-1 bg-white/5 z-50">
+    <div id="progressBar" class="h-full bg-gradient-to-l from-secondary-400 via-primary-400 to-primary-500 shadow-glow-primary transition-all duration-500 w-0"></div>
+  </div>
+
+  <!-- ==================== پس‌زمینه سینمایی و شبکه مهندسی ==================== -->
+  <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden">
+    <div class="absolute inset-0 bg-grid-pattern bg-[size:48px_48px] [mask-image:radial-gradient(ellipse_80%_80%_at_50%_50%,#000_40%,transparent_100%)]"></div>
+    <div class="absolute -top-40 -right-40 w-[550px] h-[550px] rounded-full bg-primary-500/15 blur-[130px]"></div>
+    <div class="absolute -bottom-48 -left-40 w-[500px] h-[500px] rounded-full bg-secondary-400/12 blur-[140px]"></div>
+  </div>
+
+  <!-- ==================== هدر ثابت بالای پرزنتیشن ==================== -->
+  <header class="fixed top-5 right-12 left-12 z-30 flex items-center justify-between pointer-events-none">
+    <div class="flex items-center gap-3 bg-surface-900/80 backdrop-blur-xl border border-white/10 px-4 py-2 rounded-2xl pointer-events-auto shadow-glass">
+      <span class="w-2.5 h-2.5 rounded-full bg-primary-500 animate-pulse shadow-glow-primary"></span>
+      <span class="text-xs font-extrabold tracking-wide text-white">تیم خلاقیت و طراحی محصول</span>
+      <span class="text-[11px] font-bold text-primary-300 bg-primary-500/15 px-2.5 py-0.5 rounded-full border border-primary-500/30 ss03">8 متخصص</span>
+    </div>
+
+    <div class="flex items-center gap-2 text-xs text-slate-400 bg-surface-900/60 backdrop-blur-md border border-white/10 px-4 py-2 rounded-2xl">
+      <span class="font-medium">ارائه به مدیریت عامل و معاونین</span>
+      <span class="text-secondary-400 font-extrabold ss03">• 1405</span>
+    </div>
+  </header>
+
+  <!-- ==================== کانتینر اصلی اسلایدها ==================== -->
+  <main id="slidesWrapper" class="relative z-10 w-screen h-screen">
+
+    <!-- ===================================================================
+         SLIDE 1: کاور اصلی تیم خلاقیت (Hero Cover)
+    ==================================================================== -->
+    <!-- ==================== SLIDE 1: کاور اصلی و شاخص‌های کلان سال ۱۴۰۵ ==================== -->
+<section class="slide active absolute inset-0 px-12 lg:px-20 pt-20 pb-24 flex flex-col justify-center" data-slide="1">
+  <div class="max-w-7xl mx-auto w-full">
+
+    <!-- بج بالای کاور -->
+    <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-primary-500/10 border border-primary-500/30 text-primary-300 text-xs font-bold mb-6 backdrop-blur-md ss03">
+      <span class="w-2 h-2 rounded-full bg-primary-400 animate-pulse"></span>
+      <span>گزارش جامع عملکرد به مدیرعامل و معاونین • فروردین تا آبان ۱۴۰۵</span>
+    </div>
+
+    <!-- تیتر اصلی و زیرتیتر استراتژیک -->
+    <div class="max-w-4xl space-y-4 mb-10">
+      <h1 class="text-4xl lg:text-6xl font-heavy text-white leading-[1.2] tracking-tight">
+        موتور خلق ارزش، تجربه کاربری و <span class="text-transparent bg-clip-text bg-gradient-to-l from-primary-400 to-secondary-400">هویت بصری سازمان</span>
+      </h1>
+      <p class="text-sm lg:text-lg text-slate-300 leading-relaxed max-w-3xl font-medium">
+        گزارش مستند دستاوردهای <strong class="text-white">تیم خلاقیت و طراحی محصول</strong> بر پایه تحلیل دقیق جیرا و گزارش‌های کارکرد روزانه در ۸ ماه نخست سال ۱۴۰۵؛ از معماری سرویس‌های فین‌تک و اعتباری تا کمپین‌های سراسری و زیرساخت دیزاین سیستم.
+      </p>
+    </div>
+
+    <!-- کارت‌های ۴گانه شاخص‌های کلیدی عملکرد (Executive KPIs 1405) -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+
+      <!-- KPI 1: تسک‌های Done سال ۱۴۰۵ -->
+      <div class="exec-card p-6 rounded-3xl bg-gradient-to-br from-primary-500/15 via-surface-900/80 to-white/[0.02] border border-primary-500/35 hover:border-primary-400 backdrop-blur-2xl shadow-glass">
+        <div class="flex items-center justify-between mb-3">
+          <span class="text-xs font-bold text-primary-300">تسک‌های Done در سال ۱۴۰۵</span>
+          <span class="px-2.5 py-0.5 rounded-full bg-primary-500/20 text-primary-300 text-[10px] font-heavy ss03">Jira 1405</span>
+        </div>
+        <div class="text-4xl lg:text-5xl font-heavy text-white mb-2 ss03">+410</div>
+        <p class="text-xs text-slate-400 leading-relaxed">
+          پروژه، یوزرفلو، لندینگ و خروجی گرافیکی/موشن تکمیل‌شده از ۱ فروردین ۱۴۰۵
         </p>
-      </section>
+      </div>
 
-      <!-- ==================== SLIDE 2: خلاصه مدیریتی (نمونه) ==================== -->
-      <section class="slide" data-slide="2">
-        <div class="slide-badge">۰۱ / تصویر کلان (Executive Summary)</div>
-        <h2 class="slide-title">
-          تبدیل چالش‌ها به
-          <span class="highlight">دارایی‌های قابل اندازه‌گیری</span>
+      <!-- KPI 2: نفر-روز کارکرد خالص -->
+      <div class="exec-card p-6 rounded-3xl bg-white/[0.03] border border-white/10 hover:border-primary-500/50 backdrop-blur-2xl shadow-glass">
+        <div class="flex items-center justify-between mb-3">
+          <span class="text-xs font-bold text-slate-300">کارکرد خالص مستندشده</span>
+          <span class="px-2.5 py-0.5 rounded-full bg-white/10 text-slate-300 text-[10px] font-heavy ss03">8 ماه</span>
+        </div>
+        <div class="text-4xl lg:text-5xl font-heavy text-primary-400 mb-2 ss03">871</div>
+        <p class="text-xs text-slate-400 leading-relaxed">
+          نفر-روز فعالیت خالص ثبت‌شده در لاگ‌های روزانه (بدون احتساب مرخصی و تعطیلات)
+        </p>
+      </div>
+
+      <!-- KPI 3: ساختار تیم -->
+      <div class="exec-card p-6 rounded-3xl bg-gradient-to-br from-secondary-400/15 via-surface-900/80 to-white/[0.02] border border-secondary-400/35 hover:border-secondary-400 backdrop-blur-2xl shadow-glass">
+        <div class="flex items-center justify-between mb-3">
+          <span class="text-xs font-bold text-secondary-300">ظرفیت تخصصی تیم</span>
+          <span class="px-2.5 py-0.5 rounded-full bg-secondary-400/20 text-secondary-300 text-[10px] font-heavy ss03">2 Squads</span>
+        </div>
+        <div class="text-4xl lg:text-5xl font-heavy text-white mb-2 ss03">8 <span class="text-xl font-bold text-secondary-400">نفر</span></div>
+        <p class="text-xs text-slate-400 leading-relaxed">
+          هم‌افزایی کامل دو بازوی «طراحی محصول (UX/UI)» و «آرت، موشن و گرافیک»
+        </p>
+      </div>
+
+      <!-- KPI 4: پوشش سازمانی -->
+      <div class="exec-card p-6 rounded-3xl bg-white/[0.03] border border-white/10 hover:border-secondary-400/50 backdrop-blur-2xl shadow-glass">
+        <div class="flex items-center justify-between mb-3">
+          <span class="text-xs font-bold text-slate-300">پشتیبانی عرضی سازمان</span>
+          <span class="px-2.5 py-0.5 rounded-full bg-white/10 text-secondary-300 text-[10px] font-heavy ss03">Cross-Unit</span>
+        </div>
+        <div class="text-4xl lg:text-5xl font-heavy text-secondary-400 mb-2 ss03">9 <span class="text-xl font-bold text-white">واحد</span></div>
+        <p class="text-xs text-slate-400 leading-relaxed">
+          محصول، مارکتینگ، منابع انسانی، فنی، استراتژی، اپراتوری، هوش مصنوعی، مالی و لجستیک
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+   <!-- ==================== SLIDE 2: معماری تیم و ظرفیت تخصصی اعضا در سال ۱۴۰۵ ==================== -->
+<section class="slide absolute inset-0 px-12 lg:px-20 pt-20 pb-24 flex flex-col justify-center" data-slide="2">
+  <div class="max-w-7xl mx-auto w-full">
+
+    <!-- هدر اسلاید -->
+    <div class="flex flex-col lg:flex-row lg:items-end justify-between mb-6 gap-4">
+      <div>
+        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-primary-500/10 border border-primary-500/30 text-primary-300 text-xs font-bold mb-2 ss03">
+          <span>02 / ساختار سازمانی و آرایش تخصصی تیم (Team Architecture 1405)</span>
+        </div>
+        <h2 class="text-2xl lg:text-4xl font-heavy text-white">
+          هم‌افزایی <span class="text-primary-400">۸ متخصص</span> در دو بازوی <span class="text-secondary-400">طراحی محصول و هنرهای خلاق</span>
         </h2>
-        <p class="slide-subtitle">
-          خلاصه‌ای از مهم‌ترین شاخص‌های عملکردی که با تمرکز بر سرعت، کیفیت و
-          استانداردسازی محقق شده‌اند:
-        </p>
+      </div>
+      <p class="text-xs lg:text-sm text-slate-400 max-w-md leading-relaxed">
+        ترکیب چابک از راهبری استراتژیک، مهندسی تجربه کاربری (UX/UI) و کارگردانی هنری، موشن و گرافیک در سال ۱۴۰۵:
+      </p>
+    </div>
 
-        <div class="grid-cards">
-          <div class="glass-card">
-            <div class="card-metric">+۱۲</div>
-            <div class="card-title">پروژه و محصول کلیدی</div>
-            <div class="card-desc">
-              طراحی، بازطراحی و بهینه‌سازی فلوهای حیاتی کسب‌وکار از ایده تا
-              تحویل نهایی.
-            </div>
+    <!-- ردیف اول: لایه راهبری و مدیریت (Leadership Layer) -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-5">
+
+      <!-- صدرا بهبودی -->
+      <div class="exec-card p-5 rounded-3xl bg-gradient-to-l from-primary-500/15 via-surface-900/90 to-secondary-400/10 border border-primary-500/40 backdrop-blur-2xl shadow-glass flex items-center justify-between gap-4">
+        <div class="flex items-center gap-4">
+          <div class="w-12 h-12 rounded-2xl bg-primary-500/20 border border-primary-400/40 flex items-center justify-center text-primary-300 font-heavy text-lg shrink-0">
+            ص‌ب
           </div>
-          <div class="glass-card">
-            <div class="card-metric">۴۰٪</div>
-            <div class="card-title">افزایش سرعت توسعه</div>
-            <div class="card-desc">
-              کاهش زمان طراحی تا کدنویسی به واسطه یکپارچه‌سازی دیزاین سیستم و
-              کامپوننت‌ها.
+          <div>
+            <div class="flex items-center gap-2">
+              <h3 class="text-base font-black text-white">صدرا بهبودی</h3>
+              <span class="px-2.5 py-0.5 rounded-full bg-primary-500/20 text-primary-300 text-[10px] font-extrabold border border-primary-500/30">مدیر تیم خلاقیت و طراحی محصول</span>
             </div>
+            <p class="text-xs text-slate-300 mt-1">
+              راهبری استراتژیک تیم، کارگردانی هنری، یکپارچگی برند و محصول + اجرای مستقیم تسک‌های کلیدی (اوانو کارت بانک ملت، آیکون‌ها و کمپین‌ها)[cite: 2]
+            </p>
           </div>
-          <div class="glass-card">
-            <div class="card-metric">۱۰۰٪</div>
-            <div class="card-title">هم‌راستایی با اهداف بیزینس</div>
-            <div class="card-desc">
-              ارتقای نرخ تبدیل و کاهش اصطکاک کاربران در نقاط تماس کلیدی محصولات.
+        </div>
+        <div class="text-left shrink-0 ss03">
+          <div class="text-sm font-heavy text-primary-400">141 تسک کل</div>
+          <div class="text-[10px] text-slate-400">9 تسک مستقیم ۱۴۰۵ + نظارت ۱۰۰٪</div>
+        </div>
+      </div>
+
+      <!-- علیرضا خطیبی -->
+      <div class="exec-card p-5 rounded-3xl bg-gradient-to-l from-secondary-400/15 via-surface-900/90 to-primary-500/10 border border-secondary-400/40 backdrop-blur-2xl shadow-glass flex items-center justify-between gap-4">
+        <div class="flex items-center gap-4">
+          <div class="w-12 h-12 rounded-2xl bg-secondary-400/20 border border-secondary-400/40 flex items-center justify-center text-secondary-300 font-heavy text-lg shrink-0">
+            ع‌خ
+          </div>
+          <div>
+            <div class="flex items-center gap-2">
+              <h3 class="text-base font-black text-white">علیرضا خطیبی</h3>
+              <span class="px-2.5 py-0.5 rounded-full bg-secondary-400/20 text-secondary-300 text-[10px] font-extrabold border border-secondary-400/30">مدیر تیم طراحی محصول</span>
+            </div>
+            <p class="text-xs text-slate-300 mt-1">
+              حاکمیت فرآیند Design Check، تدوین SLA و متریک‌های UX با تیم BI، راهبری دیزاین سیستم، ردا، جام جهانی و فلوهای اعتباری
+            </p>
+          </div>
+        </div>
+        <div class="text-left shrink-0 ss03">
+          <div class="text-sm font-heavy text-secondary-400">95 روز لاگ فعال</div>
+          <div class="text-[10px] text-slate-400">53 تسک کل + راهبری محصول ۱۴۰۵</div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ردیف دوم: دو بازوی اجرایی (Product Design Squad vs Creative Arts Squad) -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-5 items-stretch">
+
+      <!-- ستون راست: بازوی طراحی محصول (Product Design Squad) -->
+      <div class="p-5 rounded-3xl bg-white/[0.02] border border-primary-500/30 backdrop-blur-xl flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between pb-3 mb-3.5 border-b border-white/10">
+            <div class="flex items-center gap-2">
+              <span class="w-2.5 h-2.5 rounded-full bg-primary-400 shadow-glow-primary"></span>
+              <h3 class="text-sm font-black text-white">بازوی طراحی محصول (Product Design Squad)</h3>
+            </div>
+            <span class="text-xs font-heavy text-primary-300 ss03">155 تسک Done در ۱۴۰۵</span>
+          </div>
+
+          <div class="space-y-3">
+            <!-- امیرحسام خالویی -->
+            <div class="p-3.5 rounded-2xl bg-primary-500/10 border border-primary-500/30 flex items-center justify-between gap-3">
+              <div>
+                <div class="flex items-center gap-2">
+                  <span class="text-xs font-black text-white">امیرحسام خالویی</span>
+                  <span class="text-[10px] font-bold text-primary-300 bg-primary-500/20 px-2 py-0.5 rounded-md">طراح ارشد محصول</span>
+                </div>
+                <p class="text-[11px] text-slate-300 mt-1">
+                  اکوسیستم اعتبارات (پرستیژ، CIP، ۴ و ۶ قسطه)[cite: 3]، جام جهانی، تامین اجتماعی[cite: 3]، قبوض تجمیعی[cite: 3]، دیزاین سیستم، Clarity و پرزنتیشن[cite: 3]
+                </p>
+              </div>
+              <div class="text-left shrink-0 ss03">
+                <div class="text-xs font-heavy text-primary-400">67 تسک ۱۴۰۵ (112 کل)[cite: 3]</div>
+                <div class="text-[10px] text-slate-400">148 روز کاری فعال</div>
+              </div>
+            </div>
+
+            <!-- مینا شافعی -->
+            <div class="p-3.5 rounded-2xl bg-white/[0.03] border border-white/10 flex items-center justify-between gap-3">
+              <div>
+                <div class="flex items-center gap-2">
+                  <span class="text-xs font-black text-white">مینا شافعی</span>
+                  <span class="text-[10px] font-bold text-primary-300 bg-primary-500/15 px-2 py-0.5 rounded-md">طراح محصول</span>
+                </div>
+                <p class="text-[11px] text-slate-300 mt-1">
+                  پلتفرم MCI API Console[cite: 5]، ریدیزاین فروشگاه اوانو (Light/Dark)، پنل و لندینگ Smart SMS[cite: 5]، لندینگ B2B[cite: 5]، پذیرندگان و اپلیکیشن ردا[cite: 5]
+                </p>
+              </div>
+              <div class="text-left shrink-0 ss03">
+                <div class="text-xs font-heavy text-primary-400">71 تسک ۱۴۰۵[cite: 5]</div>
+                <div class="text-[10px] text-slate-400">118 روز کاری فعال</div>
+              </div>
+            </div>
+
+            <!-- افسانه میررستمی -->
+            <div class="p-3.5 rounded-2xl bg-white/[0.03] border border-white/10 flex items-center justify-between gap-3">
+              <div>
+                <div class="flex items-center gap-2">
+                  <span class="text-xs font-black text-white">افسانه میررستمی</span>
+                  <span class="text-[10px] font-bold text-primary-300 bg-primary-500/15 px-2 py-0.5 rounded-md">طراح محصول</span>
+                </div>
+                <p class="text-[11px] text-slate-300 mt-1">
+                  دیزاین سیستم لندینگ‌پیج‌ها + ۹ تمپلیت جامع مارکتینگ، دسکتاپ و موبایل آوای انتظار (RBT)[cite: 6]، هوش مصنوعی «زیرا» و سایت EBCOM[cite: 6]
+                </p>
+              </div>
+              <div class="text-left shrink-0 ss03">
+                <div class="text-xs font-heavy text-primary-400">17 اپیک کلان ۱۴۰۵[cite: 6]</div>
+                <div class="text-[10px] text-slate-400">132 روز کاری فعال</div>
+              </div>
             </div>
           </div>
         </div>
-      </section>
-    </main>
-
-    <!-- داک کنترل پایین صفحه -->
-    <footer class="deck-controls">
-      <div class="control-group">
-        <button class="ctrl-btn" id="prevBtn" title="اسلاید قبلی (فلش راست)">
-          → قبلی
-        </button>
-        <span class="slide-counter" id="slideCounter">۱ از ۲</span>
-        <button
-          class="ctrl-btn"
-          id="nextBtn"
-          title="اسلاید بعدی (فلش چپ / Space)">
-          بعدی ←
-        </button>
       </div>
 
-      <div class="control-group">
-        <button class="ctrl-btn" id="fullscreenBtn" title="تمام صفحه (کلید F)">
-          ⛶ تمام‌صفحه (F)
-        </button>
-      </div>
-    </footer>
+      <!-- ستون چپ: بازوی آرت، موشن و گرافیک (Creative Arts Squad) -->
+      <div class="p-5 rounded-3xl bg-white/[0.02] border border-secondary-400/30 backdrop-blur-xl flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between pb-3 mb-3.5 border-b border-white/10">
+            <div class="flex items-center gap-2">
+              <span class="w-2.5 h-2.5 rounded-full bg-secondary-400 shadow-glow-secondary"></span>
+              <h3 class="text-sm font-black text-white">بازوی آرت، موشن و گرافیک (Creative Arts Squad)</h3>
+            </div>
+            <span class="text-xs font-heavy text-secondary-300 ss03">255 تسک Done در ۱۴۰۵</span>
+          </div>
 
-    <script src="js/engine.js"></script>
-  </body>
+          <div class="space-y-3">
+            <!-- امیرحسین فراهانی -->
+            <div class="p-3.5 rounded-2xl bg-secondary-400/10 border border-secondary-400/30 flex items-center justify-between gap-3">
+              <div>
+                <div class="flex items-center gap-2">
+                  <span class="text-xs font-black text-white">امیرحسین فراهانی</span>
+                  <span class="text-[10px] font-bold text-secondary-300 bg-secondary-400/20 px-2 py-0.5 rounded-md">آرت دیزاینر</span>
+                </div>
+                <p class="text-[11px] text-slate-300 mt-1">
+                  سیستم رنگ اوانو، برندبوک پرستیژ، لوگوی زیرا، تایپ‌فیس همراه اول، کارت‌های CIP و پرستیژ[cite: 8]، وکتور ۴۵+ لوگو و بیلبوردهای اعتبار
+                </p>
+              </div>
+              <div class="text-left shrink-0 ss03">
+                <div class="text-xs font-heavy text-secondary-400">80 تسک ۱۴۰۵[cite: 8]</div>
+                <div class="text-[10px] text-slate-400">126 روز کاری فعال</div>
+              </div>
+            </div>
+
+            <!-- پارسا نوایی -->
+            <div class="p-3.5 rounded-2xl bg-white/[0.03] border border-white/10 flex items-center justify-between gap-3">
+              <div>
+                <div class="flex items-center gap-2">
+                  <span class="text-xs font-black text-white">پارسا نوایی</span>
+                  <span class="text-[10px] font-bold text-secondary-300 bg-secondary-400/15 px-2 py-0.5 rounded-md">موشن دیزاینر</span>
+                </div>
+                <p class="text-[11px] text-slate-300 mt-1">
+                  انیمیشن‌های Lottie (زیرا، جام جهانی، API Console، تامین اجتماعی)، موشن پرستیژ و RBT[cite: 7]، بیلبوردهای ۴+۲ و ۶ قسطه و ۲۳ پیکتوگرام[cite: 7]
+                </p>
+              </div>
+              <div class="text-left shrink-0 ss03">
+                <div class="text-xs font-heavy text-secondary-400">65 تسک ۱۴۰۵[cite: 7]</div>
+                <div class="text-[10px] text-slate-400">139 روز کاری فعال</div>
+              </div>
+            </div>
+
+            <!-- مهران سلطان‌محمدی -->
+            <div class="p-3.5 rounded-2xl bg-white/[0.03] border border-white/10 flex items-center justify-between gap-3">
+              <div>
+                <div class="flex items-center gap-2">
+                  <span class="text-xs font-black text-white">مهران سلطان‌محمدی</span>
+                  <span class="text-[10px] font-bold text-secondary-300 bg-secondary-400/15 px-2 py-0.5 rounded-md">طراح گرافیک</span>
+                </div>
+                <p class="text-[11px] text-slate-300 mt-1">
+                  هویت بصری جام جهانی، هندبوک جامعه‌پذیری و کد رفتار حرفه‌ای[cite: 9]، پرزنتیشن اوانو، گرافیک محصول و ۴۳+ کمپین سوشال و HR[cite: 9]
+                </p>
+              </div>
+              <div class="text-left shrink-0 ss03">
+                <div class="text-xs font-heavy text-secondary-400">110 تسک ۱۴۰۵[cite: 9]</div>
+                <div class="text-[10px] text-slate-400">113 روز کاری فعال</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+    <!-- ==================== SLIDE 3: معماری محصولات فین‌تک، اعتبارات (BNPL)، پرستیژ و پرداخت ==================== -->
+<section class="slide absolute inset-0 px-12 lg:px-20 pt-20 pb-24 flex flex-col justify-center" data-slide="3">
+  <div class="max-w-7xl mx-auto w-full">
+
+    <!-- هدر اسلاید -->
+    <div class="flex flex-col lg:flex-row lg:items-end justify-between mb-6 gap-4">
+      <div>
+        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-primary-500/10 border border-primary-500/30 text-primary-300 text-xs font-bold mb-2 ss03">
+          <span>03 / محور اول طراحی محصول: فین‌تک و اعتبارات (FinTech, BNPL & Core Services)</span>
+        </div>
+        <h2 class="text-2xl lg:text-4xl font-heavy text-white">
+          معماری تجربه کاربری <span class="text-primary-400">سرویس‌های اعتباری، پرستیژ</span> و <span class="text-secondary-400">پرداخت‌های نوین</span>
+        </h2>
+      </div>
+      <div class="flex items-center gap-2.5 shrink-0">
+        <span class="px-3.5 py-1.5 rounded-xl bg-primary-500/15 border border-primary-500/30 text-primary-300 text-xs font-heavy ss03">
+          امیرحسام خالویی • ۶۷ تسک Done در ۱۴۰۵ (۱۱۲ تسک کل) + ۱۴۸ روز فعال
+        </span>
+      </div>
+    </div>
+
+    <!-- گرید ۳ ستونه دستاوردهای فین‌تک و اعتبارات -->
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-5 items-stretch mb-5">
+
+      <!-- کارت ۱: اکوسیستم جامع اعتبارات (BNPL) و صدور کارت -->
+      <div class="exec-card p-6 rounded-3xl bg-gradient-to-b from-primary-500/15 to-white/[0.02] border border-primary-500/35 hover:border-primary-400 backdrop-blur-2xl shadow-glass flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between mb-4">
+            <span class="w-10 h-10 rounded-2xl bg-primary-500/20 border border-primary-400/40 flex items-center justify-center text-primary-300 font-heavy text-sm ss03">01</span>
+            <span class="px-3 py-1 rounded-full bg-primary-500/20 border border-primary-500/40 text-primary-300 text-xs font-heavy ss03">+40 فلو و تسک اعتباری</span>
+          </div>
+          <h3 class="text-base font-black text-white mb-1">اکوسیستم اعتبارات (BNPL) و تردپارتی</h3>
+          <p class="text-[11px] font-semibold text-primary-300 mb-3.5">طراحی کامل چرخه دریافت، مصرف و تسویه اعتبار</p>
+
+          <ul class="space-y-2.5 text-xs text-slate-300 leading-relaxed border-t border-white/10 pt-3.5">
+            <li class="flex items-start gap-2">
+              <span class="text-primary-400 font-black mt-0.5">✦</span>
+              <span><strong class="text-white">طرح‌های اعتباری متنوع:</strong> طراحی فلوهای اعتبار حلقه باز (نارنجی) و بسته (B2B/B2C)، <span class="ss03">4</span> قسطه، <span class="ss03">6</span> قسطه[cite: 3]، اعتبار تلکویی/اپراتوری در «همراه من» و اعتبار فراگیر.</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-primary-400 font-black mt-0.5">✦</span>
+              <span><strong class="text-white">پرداخت خودکار و تردپارتی‌ها:</strong> طراحی یوزرفلوی <strong class="text-primary-300">پرداخت خودکار بدهی اعتباری</strong> از موجودی نقدی و فلوهای دریافت اعتبار در تردپارتی‌ها (با و بدون OTP).</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-primary-400 font-black mt-0.5">✦</span>
+              <span><strong class="text-white">چرخه کامل صدور و مدیریت کارت:</strong> طراحی فلوهای صدور اوانو کارت، تبدیل کدپستی به آدرس، مسدودسازی، تغییر رمز و تمدید بدون امضا.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- کارت ۲: طرح استراتژیک اعتبار پرستیژ و مشتریان CIP -->
+      <div class="exec-card p-6 rounded-3xl bg-gradient-to-b from-secondary-400/15 to-white/[0.02] border border-secondary-400/35 hover:border-secondary-400 backdrop-blur-2xl shadow-glass flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between mb-4">
+            <span class="w-10 h-10 rounded-2xl bg-secondary-400/20 border border-secondary-400/40 flex items-center justify-center text-secondary-300 font-heavy text-sm ss03">02</span>
+            <span class="px-3 py-1 rounded-full bg-secondary-400/20 border border-secondary-400/40 text-secondary-300 text-xs font-heavy ss03">12 تسک کلیدی</span>
+          </div>
+          <h3 class="text-base font-black text-white mb-1">سرویس ویژه «اعتبار پرستیژ» و مشتریان CIP</h3>
+          <p class="text-[11px] font-semibold text-secondary-300 mb-3.5">تجربه کاربری اختصاصی ویژه مشترکین رده‌بالا (VIP/CIP)</p>
+
+          <ul class="space-y-2.5 text-xs text-slate-300 leading-relaxed border-t border-white/10 pt-3.5">
+            <li class="flex items-start gap-2">
+              <span class="text-secondary-400 font-black mt-0.5">✦</span>
+              <span><strong class="text-white">فلوهای دوگانه موبایل و دسکتاپ:</strong> طراحی کامل لندینگ، پروتوتایپ تعاملی، اسلایدر انتخاب مبلغ داینامیک و محاسبه‌گر اقساط پرستیژ[cite: 3].</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-secondary-400 font-black mt-0.5">✦</span>
+              <span><strong class="text-white">احراز هویت ویدئویی و ریفرال:</strong> طراحی فلوی جدید <strong class="text-secondary-300">تعهدنامه و احراز هویت ویدئویی</strong> (بدون نیاز به وکالت‌نامه محضری)[cite: 3] و سیستم دعوت از دوستان (Referral)[cite: 3].</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-secondary-400 font-black mt-0.5">✦</span>
+              <span><strong class="text-white">پوشش کامل Edge Caseها و Sandbox:</strong> طراحی تمام حالت‌های خطا، رد درخواست، وثیقه‌گذاری، ارتقای سقف CIP به <span class="ss03">20</span> میلیون[cite: 3] و تست کامل نسخه Sandbox.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- کارت ۳: سرویس‌های پرداخت، سوپراپ و بهینه‌سازی داده‌محور -->
+      <div class="exec-card p-6 rounded-3xl bg-white/[0.03] border border-white/10 hover:border-primary-500/50 backdrop-blur-2xl shadow-glass flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between mb-4">
+            <span class="w-10 h-10 rounded-2xl bg-primary-500/15 border border-primary-500/30 flex items-center justify-center text-primary-400 font-heavy text-sm ss03">03</span>
+            <span class="px-3 py-1 rounded-full bg-white/10 text-primary-300 text-xs font-heavy ss03">15 تسک محصولی</span>
+          </div>
+          <h3 class="text-base font-black text-white mb-1">پرداخت‌های نوین، پینکت و تحلیل Clarity</h3>
+          <p class="text-[11px] font-semibold text-slate-400 mb-3.5">توسعه سرویس‌های روزمره و بهبود نرخ تبدیل (CRO)</p>
+
+          <ul class="space-y-2.5 text-xs text-slate-300 leading-relaxed border-t border-white/10 pt-3.5">
+            <li class="flex items-start gap-2">
+              <span class="text-primary-400 font-black mt-0.5">✦</span>
+              <span><strong class="text-white">پرداخت تجمیعی قبوض و DCB:</strong> طراحی سرویس استعلام و <strong class="text-primary-300">پرداخت یکجای قبوض خدماتی</strong>[cite: 3]، سرویس پرداخت از طریق قبض (DCB) و مدیریت کیف پول.</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-primary-400 font-black mt-0.5">✦</span>
+              <span><strong class="text-white">خرید حضوری پینکت، گیفت‌کارت و امتیاز:</strong> طراحی سرویس بارکد خرید حضوری پینکت[cite: 3]، سرویس گیفت‌کارت اوانو و سیستم پلکانی اینترنت هدیه بدون قرعه‌کشی[cite: 3].</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-primary-400 font-black mt-0.5">✦</span>
+              <span><strong class="text-white">تحلیل Clarity و بنچمارک رقبا:</strong> پایش رفتار کاربران با <strong class="text-secondary-300">Microsoft Clarity</strong> روی لندینگ‌های ۴ قسطه و CIP و تدوین سند تحلیل SWOT رقبای اوانو.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- نوار پایین: تاثیر مستقیم بر شاخص‌های کسب‌وکار -->
+    <div class="p-4 rounded-2xl bg-surface-900/80 border border-white/10 backdrop-blur-xl flex flex-col lg:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-2.5">
+        <span class="w-2.5 h-2.5 rounded-full bg-primary-400 shadow-glow-primary"></span>
+        <span class="text-xs font-extrabold text-white">ارزش تجاری خلق‌شده:</span>
+        <span class="text-xs text-slate-300">حذف گلوگاه‌های مراجعه حضوری با احراز هویت ویدئویی[cite: 3]، افزایش نرخ تکمیل ثبت‌نام اعتبارات با تحلیل Clarity و پوشش کامل سناریوهای خطای بانکی[cite: 3].</span>
+      </div>
+      <div class="px-3.5 py-1.5 rounded-xl bg-primary-500/10 border border-primary-500/30 text-primary-300 text-xs font-heavy shrink-0 ss03">
+        همکاری مستقیم با تیم‌های محصول، اعتبار و مارکتینگ[cite: 3]
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ==================== SLIDE 4: زیرساخت دیزاین سیستم، جام جهانی ۲۰۲۶ و پروژه‌های استراتژیک ==================== -->
+<section class="slide absolute inset-0 px-12 lg:px-20 pt-20 pb-24 flex flex-col justify-center" data-slide="4">
+  <div class="max-w-7xl mx-auto w-full">
+
+    <!-- هدر اسلاید -->
+    <div class="flex flex-col lg:flex-row lg:items-end justify-between mb-6 gap-4">
+      <div>
+        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-secondary-400/10 border border-secondary-400/30 text-secondary-300 text-xs font-bold mb-2 ss03">
+          <span>04 / محور دوم طراحی محصول: زیرساخت، مگاپروژه‌ها و حاکمیت کیفیت (Design System & Strategic Epics)</span>
+        </div>
+        <h2 class="text-2xl lg:text-4xl font-heavy text-white">
+          مقیاس‌پذیری با <span class="text-primary-400">دیزاین سیستم یکپارچه</span> و خلق <span class="text-secondary-400">مگاپروژه‌های ملی</span>
+        </h2>
+      </div>
+      <div class="flex items-center gap-2.5 shrink-0">
+        <span class="px-3.5 py-1.5 rounded-xl bg-secondary-400/15 border border-secondary-400/30 text-secondary-300 text-xs font-heavy ss03">
+          علیرضا خطیبی + امیرحسام خالویی • زیرساخت و اپیک‌های ۱۴۰۵
+        </span>
+      </div>
+    </div>
+
+    <!-- گرید ۲ در ۲ دستاوردهای زیرساختی و استراتژیک -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-5 items-stretch mb-5">
+
+      <!-- باکس ۱: مگاپروژه جام جهانی ۲۰۲۶ (World Cup 2026) -->
+      <div class="exec-card p-5 rounded-3xl bg-gradient-to-br from-primary-500/15 via-surface-900/85 to-white/[0.02] border border-primary-500/35 hover:border-primary-400 backdrop-blur-2xl shadow-glass flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between mb-3">
+            <div class="flex items-center gap-2.5">
+              <span class="w-9 h-9 rounded-xl bg-primary-500/20 border border-primary-400/40 flex items-center justify-center text-primary-300 font-heavy text-xs ss03">01</span>
+              <h3 class="text-base font-black text-white">مگاپروژه کمپین «جام جهانی ۲۰۲۶» در همراه‌من</h3>
+            </div>
+            <span class="px-2.5 py-1 rounded-full bg-primary-500/20 text-primary-300 text-[10px] font-heavy ss03">+18 تسک محصولی</span>
+          </div>
+          <p class="text-xs text-slate-300 leading-relaxed mb-3">
+            طراحی صفر تا صد گیمیفیکیشن، پیش‌بینی و سیستم وفاداری مشترک اوانو و همراه اول با بالاترین سطح تعامل کاربر:
+          </p>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-[11px] text-slate-300 border-t border-white/10 pt-3">
+            <div class="flex items-center gap-1.5"><span class="text-primary-400">●</span><span>طراحی Home، جدول امتیازات و پیش‌بینی</span></div>
+            <div class="flex items-center gap-1.5"><span class="text-primary-400">●</span><span>موتور گردونه شانس، جایزه‌ها و ماموریت‌ها</span></div>
+            <div class="flex items-center gap-1.5"><span class="text-primary-400">●</span><span>فلوی «یارگیری» و دعوت دوستان با کد</span></div>
+            <div class="flex items-center gap-1.5"><span class="text-primary-400">●</span><span>لندینگ اختصاصی و تگ جام‌جهانی در اوانو</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- باکس ۲: معماری دیزاین سیستم، توکن‌ها و حاکمیت کیفیت -->
+      <div class="exec-card p-5 rounded-3xl bg-gradient-to-br from-secondary-400/15 via-surface-900/85 to-white/[0.02] border border-secondary-400/35 hover:border-secondary-400 backdrop-blur-2xl shadow-glass flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between mb-3">
+            <div class="flex items-center gap-2.5">
+              <span class="w-9 h-9 rounded-xl bg-secondary-400/20 border border-secondary-400/40 flex items-center justify-center text-secondary-300 font-heavy text-xs ss03">02</span>
+              <h3 class="text-base font-black text-white">معماری Design System و فرآیند Design Check</h3>
+            </div>
+            <span class="px-2.5 py-1 rounded-full bg-secondary-400/20 text-secondary-300 text-[10px] font-heavy ss03">حاکمیت طراحی</span>
+          </div>
+          <p class="text-xs text-slate-300 leading-relaxed mb-3">
+            ایجاد زبان بصری مشترک بین تیم طراحی و تیم‌های فنی (Front-End / Mobile) برای افزایش سرعت توسعه:
+          </p>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-[11px] text-slate-300 border-t border-white/10 pt-3">
+            <div class="flex items-center gap-1.5"><span class="text-secondary-400">●</span><span>تعریف Color Tokens و Typography</span></div>
+            <div class="flex items-center gap-1.5"><span class="text-secondary-400">●</span><span>استانداردسازی Spacing, Grids & Radius</span></div>
+            <div class="flex items-center gap-1.5"><span class="text-secondary-400">●</span><span>نهادینه‌سازی Design Check قبل از انتشار</span></div>
+            <div class="flex items-center gap-1.5"><span class="text-secondary-400">●</span><span>تدوین SLA و متریک‌های UX با تیم BI</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- باکس ۳: تسهیلات تامین اجتماعی و بازطراحی سوپراپ اوانو -->
+      <div class="exec-card p-5 rounded-3xl bg-white/[0.03] border border-white/10 hover:border-primary-500/50 backdrop-blur-2xl shadow-glass flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between mb-3">
+            <div class="flex items-center gap-2.5">
+              <span class="w-9 h-9 rounded-xl bg-primary-500/15 border border-primary-500/30 flex items-center justify-center text-primary-400 font-heavy text-xs ss03">03</span>
+              <h3 class="text-base font-black text-white">تسهیلات تامین اجتماعی و تجربه کاربری سوپراپ</h3>
+            </div>
+            <span class="px-2.5 py-1 rounded-full bg-white/10 text-primary-300 text-[10px] font-heavy ss03">UX Optimization</span>
+          </div>
+          <p class="text-xs text-slate-300 leading-relaxed mb-3">
+            ساده‌سازی فلوهای پیچیده بانکی و مالی برای طیف‌های متنوع جمعیتی (از جمله بازنشستگان و کاربران عمومی):
+          </p>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-[11px] text-slate-300 border-t border-white/10 pt-3">
+            <div class="flex items-center gap-1.5"><span class="text-primary-400">●</span><span>فلوی دریافت و اقساط مستمری‌بگیران</span></div>
+            <div class="flex items-center gap-1.5"><span class="text-primary-400">●</span><span>طراحی بالانس اختصاصی تامین اجتماعی</span></div>
+            <div class="flex items-center gap-1.5"><span class="text-primary-400">●</span><span>بازطراحی هوم‌پیج، پروفایل و خدمات اوانو</span></div>
+            <div class="flex items-center gap-1.5"><span class="text-primary-400">●</span><span>طراحی فلوهای e-KYC، ثبت‌نام و رمز عبور</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- باکس ۴: نمایشگاه الکامپ و پرزنتیشن‌های استراتژیک مدیریتی -->
+      <div class="exec-card p-5 rounded-3xl bg-white/[0.03] border border-white/10 hover:border-secondary-400/50 backdrop-blur-2xl shadow-glass flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between mb-3">
+            <div class="flex items-center gap-2.5">
+              <span class="w-9 h-9 rounded-xl bg-secondary-400/15 border border-secondary-400/30 flex items-center justify-center text-secondary-400 font-heavy text-xs ss03">04</span>
+              <h3 class="text-base font-black text-white">نمایشگاه الکامپ و پرزنتیشن‌های کلان مدیریتی</h3>
+            </div>
+            <span class="px-2.5 py-1 rounded-full bg-white/10 text-secondary-300 text-[10px] font-heavy ss03">B2B & Executive</span>
+          </div>
+          <p class="text-xs text-slate-300 leading-relaxed mb-3">
+            نمایندگی تخصصی تیم محصول در رویدادهای ملی و ساخت ابزارهای پرزنتیشن تعاملی برای مذاکرات کلان:
+          </p>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-[11px] text-slate-300 border-t border-white/10 pt-3">
+            <div class="flex items-center gap-1.5"><span class="text-secondary-400">●</span><span>طراحی رابط کاربری <strong class="text-white">کیوسک لمسی الکامپ</strong></span></div>
+            <div class="flex items-center gap-1.5"><span class="text-secondary-400">●</span><span>حضور فعال در غرفه و پرزنت محصولات</span></div>
+            <div class="flex items-center gap-1.5"><span class="text-secondary-400">●</span><span>کدنویسی پرزنتیشن جامع <strong class="text-white">قزوین و توبان</strong></span></div>
+            <div class="flex items-center gap-1.5"><span class="text-secondary-400">●</span><span>ساختاردهی فیگما و پرزنتیشن استراتژی ۱۴۰۵</span></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- فوتر اسلاید ۴ -->
+    <div class="p-4 rounded-2xl bg-surface-900/80 border border-white/10 backdrop-blur-xl flex flex-col lg:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-2.5">
+        <span class="w-2.5 h-2.5 rounded-full bg-secondary-400 shadow-glow-secondary"></span>
+        <span class="text-xs font-extrabold text-white">دستاورد زیرساختی:</span>
+        <span class="text-xs text-slate-300">کاهش چشمگیر زمان طراحی و کدنویسی فرانت‌اند با استقرار توکن‌های دیزاین سیستم و تضمین کیفیت خروجی با فرآیند Design Check.</span>
+      </div>
+      <div class="px-3.5 py-1.5 rounded-xl bg-secondary-400/10 border border-secondary-400/30 text-secondary-300 text-xs font-heavy shrink-0 ss03">
+        هم‌افزایی با تیم‌های فنی، BI و استراتژی
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ==================== SLIDE 5: پلتفرم‌های B2B، فروشگاه اوانو، ردا، RBT و لندینگ‌سیستم ==================== -->
+<section class="slide absolute inset-0 px-12 lg:px-20 pt-20 pb-24 flex flex-col justify-center" data-slide="5">
+  <div class="max-w-7xl mx-auto w-full">
+
+    <!-- هدر اسلاید + شاخص‌های کلیدی تیم محصول در ۱۴۰۵ -->
+    <div class="flex flex-col lg:flex-row lg:items-end justify-between mb-6 gap-4">
+      <div>
+        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-primary-500/10 border border-primary-500/30 text-primary-300 text-xs font-bold mb-2 ss03">
+          <span>05 / گستره پلتفرم‌ها و محصولات سازمانی در سال ۱۴۰۵ (Product Design Squad)</span>
+        </div>
+        <h2 class="text-2xl lg:text-4xl font-heavy text-white">
+          پوشش ۳۶۰ درجه <span class="text-primary-400">پلتفرم‌های B2B، فروشگاه، ردا</span> و <span class="text-secondary-400">زیرساخت لندینگ‌ها</span>
+        </h2>
+      </div>
+
+      <!-- آمار کلیدی این بخش در سال ۱۴۰۵ -->
+      <div class="grid grid-cols-3 gap-3 shrink-0">
+        <div class="px-4 py-2 rounded-2xl bg-primary-500/15 border border-primary-500/30 text-center">
+          <div class="text-xl font-heavy text-primary-400 ss03">155</div>
+          <div class="text-[10px] font-bold text-slate-300">تسک محصولی Done ۱۴۰۵</div>
+        </div>
+        <div class="px-4 py-2 rounded-2xl bg-white/[0.04] border border-white/10 text-center">
+          <div class="text-xl font-heavy text-white ss03">9</div>
+          <div class="text-[10px] font-bold text-primary-300">تمپلیت جامع لندینگ</div>
+        </div>
+        <div class="px-4 py-2 rounded-2xl bg-secondary-400/15 border border-secondary-400/30 text-center">
+          <div class="text-xl font-heavy text-secondary-400 ss03">+8</div>
+          <div class="text-[10px] font-bold text-slate-300">پلتفرم B2B و B2C</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- گرید ۳ ستونه دستاوردهای کلیدی اعضای تیم طراحی محصول در سال ۱۴۰۵ -->
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-5 items-stretch mb-5">
+
+      <!-- کارت ۱: راهبری محصول، فرآیندها و سامانه ردا (علیرضا خطیبی) -->
+      <div class="exec-card p-6 rounded-3xl bg-gradient-to-b from-primary-500/15 to-white/[0.02] border border-primary-500/35 hover:border-primary-400 backdrop-blur-2xl shadow-glass flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between mb-4">
+            <div>
+              <span class="text-[10px] font-extrabold text-primary-300 bg-primary-500/20 px-2.5 py-0.5 rounded-full border border-primary-500/30 ss03">95 روز راهبری فعال ۱۴۰۵</span>
+              <h3 class="text-base font-black text-white mt-1.5">حاکمیت دیزاین و هدایت پلتفرم‌ها</h3>
+            </div>
+            <span class="text-xs font-bold text-slate-300 bg-white/5 px-2.5 py-1 rounded-lg">علیرضا خطیبی</span>
+          </div>
+
+          <ul class="space-y-2.5 text-xs text-slate-300 leading-relaxed border-t border-white/10 pt-3.5">
+            <li class="flex items-start gap-2">
+              <span class="text-primary-400 font-black mt-0.5">✦</span>
+              <span><strong class="text-white font-bold">استقرار فرآیند Design Check و SLA:</strong> طراحی ساختار کنترل کیفی APK و ثبت توافق‌نامه رسمی فرآیندهای کاری با تیم محصول و توسعه.</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-primary-400 font-black mt-0.5">✦</span>
+              <span><strong class="text-white font-bold">سند متریک‌های UX و هوش تجاری:</strong> تدوین شاخص‌های پایش تجربه کاربری سوپراپ اوانو با همکاری مستقیم تیم BI و تحلیل داده‌ها.</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-primary-400 font-black mt-0.5">✦</span>
+              <span><strong class="text-white font-bold">سامانه «ردا» و هدایت محصولات:</strong> پروتوتایپ، ارائه و دیزاین‌چک سامانه ردا در سازمان امور دانشجویان و راهبری هوم‌پیج، گیفت‌کارت و پرستیژ.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- کارت ۲: پلتفرم‌های B2B، API Console، فروشگاه و وام دانشجویی ردا (مینا شافعی - 71 تسک در ۱۴۰۵) -->
+      <div class="exec-card p-6 rounded-3xl bg-white/[0.03] border border-white/10 hover:border-primary-500/50 backdrop-blur-2xl shadow-glass flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between mb-4">
+            <div>
+              <span class="text-[10px] font-extrabold text-secondary-300 bg-secondary-400/15 px-2.5 py-0.5 rounded-full border border-secondary-400/30 ss03">71 تسک Done در ۱۴۰۵ • 118 روز فعال</span>
+              <h3 class="text-base font-black text-white mt-1.5">پلتفرم‌های B2B، فروشگاه و ردا</h3>
+            </div>
+            <span class="text-xs font-bold text-slate-300 bg-white/5 px-2.5 py-1 rounded-lg">مینا شافعی</span>
+          </div>
+
+          <ul class="space-y-2.5 text-xs text-slate-300 leading-relaxed border-t border-white/10 pt-3.5">
+            <li class="flex items-start gap-2">
+              <span class="text-secondary-400 font-black mt-0.5">✦</span>
+              <span><strong class="text-white font-bold">اکوسیستم MCI API Console و Smart SMS:</strong> طراحی وب‌سایت، پنل مشتری/ادمین، <span class="ss03">6</span> صفحه راهکارهای دیجیتال صنایع + فلوچارت، پنل و لندینگ اسمارت اس‌ام‌اس.</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-secondary-400 font-black mt-0.5">✦</span>
+              <span><strong class="text-white font-bold">ریدیزاین فروشگاه اوانو و فاز ۱ کیف پول:</strong> بازطراحی کامل صفحات و UI Kit فروشگاه (Light & Dark) و طراحی صفحه کیف پول، کارت‌ها و انتقال رفاهی.</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-secondary-400 font-black mt-0.5">✦</span>
+              <span><strong class="text-white font-bold">لندینگ‌های B2B و وام دانشجویی «ردا»:</strong> طراحی لندینگ پذیرندگان اوانو، اعتبار سازمانی B2B، کیف پول ایران، <strong class="text-primary-300">فلوی وام دانشجویی بانک ملت در ردا</strong> و آیکون زیرا.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- کارت ۳: دیزاین سیستم لندینگ‌ها، آوای انتظار و زیرا (افسانه میررستمی - 17 اپیک کلان در ۱۴۰۵) -->
+      <div class="exec-card p-6 rounded-3xl bg-gradient-to-b from-secondary-400/15 to-white/[0.02] border border-secondary-400/35 hover:border-secondary-400 backdrop-blur-2xl shadow-glass flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between mb-4">
+            <div>
+              <span class="text-[10px] font-extrabold text-primary-300 bg-primary-500/20 px-2.5 py-0.5 rounded-full border border-primary-500/30 ss03">17 اپیک Done در ۱۴۰۵ • 132 روز فعال</span>
+              <h3 class="text-base font-black text-white mt-1.5">لندینگ‌سیستم، RBT و هوش مصنوعی</h3>
+            </div>
+            <span class="text-xs font-bold text-slate-300 bg-white/5 px-2.5 py-1 rounded-lg">افسانه میررستمی</span>
+          </div>
+
+          <ul class="space-y-2.5 text-xs text-slate-300 leading-relaxed border-t border-white/10 pt-3.5">
+            <li class="flex items-start gap-2">
+              <span class="text-primary-400 font-black mt-0.5">✦</span>
+              <span><strong class="text-white font-bold">معماری دیزاین سیستم لندینگ‌پیج‌ها:</strong> استانداردسازی کامپوننت‌ها و طراحی وایرفریم، UI و پروتوتایپ تعاملی برای <span class="ss03">9</span> تمپلیت جامع (کمپین، اطلاع‌رسانی، سرویس جدید).</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-primary-400 font-black mt-0.5">✦</span>
+              <span><strong class="text-white font-bold">سرویس آوای انتظار همراه من (RBT):</strong> بررسی URS و طراحی کامل کامپوننت‌ها و صفحات نسخه موبایل و دسکتاپ در دو تم Light و Dark.</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-primary-400 font-black mt-0.5">✦</span>
+              <span><strong class="text-white font-bold">هوش مصنوعی «زیرا» و وب‌سایت EBCOM:</strong> تحلیل فاندیشن، داشبورد و رقبای Ziira AI، طراحی سکشن معرفی اوانو در سایت `ebcom.ir` و بنچمارک نظرسنجی.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- نوار پایین: هم‌افزایی و دستاورد زیرساختی تیم طراحی محصول -->
+    <div class="p-4 rounded-2xl bg-surface-900/80 border border-white/10 backdrop-blur-xl flex flex-col lg:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-2.5">
+        <span class="w-2.5 h-2.5 rounded-full bg-primary-400 shadow-glow-primary"></span>
+        <span class="text-xs font-extrabold text-white">نتیجه استراتژیک برای سازمان:</span>
+        <span class="text-xs text-slate-300">پوشش همزمان محصولات B2C (سوپراپ اوانو، فروشگاه، آوای انتظار، ردا) و پلتفرم‌های B2B (API Console، Smart SMS، پذیرندگان و اعتبار سازمانی) با یک زبان بصری واحد.</span>
+      </div>
+      <div class="px-3.5 py-1.5 rounded-xl bg-primary-500/10 border border-primary-500/30 text-primary-300 text-xs font-heavy shrink-0 ss03">
+        +147 فایل فیگمای مستند و بک‌آپ‌گیری‌شده
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ==================== SLIDE 6: دستاوردهای بازوی آرت، موشن و گرافیک در سال ۱۴۰۵ ==================== -->
+<section class="slide absolute inset-0 px-12 lg:px-20 pt-20 pb-24 flex flex-col justify-center" data-slide="6">
+  <div class="max-w-7xl mx-auto w-full">
+
+    <!-- هدر اسلاید + شاخص‌های کلیدی بخش آرت، موشن و گرافیک در سال ۱۴۰۵ -->
+    <div class="flex flex-col lg:flex-row lg:items-end justify-between mb-6 gap-4">
+      <div>
+        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-secondary-400/10 border border-secondary-400/30 text-secondary-300 text-xs font-bold mb-2 ss03">
+          <span>06 / کارگردانی هنری، موشن و ارتباطات بصری برند در سال ۱۴۰۵ (Creative Arts Squad)</span>
+        </div>
+        <h2 class="text-2xl lg:text-4xl font-heavy text-white">
+          خلق <span class="text-secondary-400">هویت بصری، کمپین‌های شهری</span> و <span class="text-primary-400">تجربه‌های متحرک</span>
+        </h2>
+      </div>
+
+      <!-- نوار آمار کلیدی بازوی هنر و رسانه در ۱۴۰۵ -->
+      <div class="grid grid-cols-3 gap-3 shrink-0">
+        <div class="px-4 py-2 rounded-2xl bg-secondary-400/15 border border-secondary-400/30 text-center">
+          <div class="text-xl font-heavy text-secondary-400 ss03">264</div>
+          <div class="text-[10px] font-bold text-slate-300">تسک Done در سال ۱۴۰۵</div>
+        </div>
+        <div class="px-4 py-2 rounded-2xl bg-white/[0.04] border border-white/10 text-center">
+          <div class="text-xl font-heavy text-white ss03">+45</div>
+          <div class="text-[10px] font-bold text-primary-300">لوگو و هویت بصری برند</div>
+        </div>
+        <div class="px-4 py-2 rounded-2xl bg-primary-500/15 border border-primary-500/30 text-center">
+          <div class="text-xl font-heavy text-primary-400 ss03">100%</div>
+          <div class="text-[10px] font-bold text-slate-300">خودکفایی تبلیغاتی و چاپی</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- گرید ۳ ستونه دستاوردهای تخصصی آرت، موشن و گرافیک در سال ۱۴۰۵ -->
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-5 items-stretch mb-5">
+
+      <!-- کارت ۱: آرت دیزاین و سیستم‌های بصری (امیرحسین فراهانی - 80 تسک Done در ۱۴۰۵) -->
+      <div class="exec-card p-6 rounded-3xl bg-gradient-to-b from-secondary-400/15 to-white/[0.02] border border-secondary-400/35 hover:border-secondary-400 backdrop-blur-2xl shadow-glass flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between mb-4">
+            <div>
+              <span class="text-[10px] font-extrabold text-secondary-300 bg-secondary-400/20 px-2.5 py-0.5 rounded-full border border-secondary-400/30 ss03">80 تسک Done ۱۴۰۵ • 126 روز فعال</span>
+              <h3 class="text-base font-black text-white mt-1.5">آرت دیزاین و هویت بصری برندها</h3>
+            </div>
+            <span class="text-xs font-bold text-slate-300 bg-white/5 px-2.5 py-1 rounded-lg">امیرحسین فراهانی</span>
+          </div>
+
+          <ul class="space-y-2.5 text-xs text-slate-300 leading-relaxed border-t border-white/10 pt-3.5">
+            <li class="flex items-start gap-2">
+              <span class="text-secondary-400 font-black mt-0.5">✦</span>
+              <span><strong class="text-white font-bold">خلق برندبوک، لوگو و تایپ‌فیس:</strong> طراحی لوگوی هوش مصنوعی «زیرا»، دفترچه هویت بصری «همراه پرستیژ»، لوگوی آوای انتظار، آرمان‌کراد و تایپ‌فیس اختصاصی همراه اول.</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-secondary-400 font-black mt-0.5">✦</span>
+              <span><strong class="text-white font-bold">سیستم رنگ، کارت‌ها و آیکون اپ:</strong> معماری Color System اوانو، طراحی کارت لوکس <strong class="text-secondary-300">MCI-CIP</strong> و کارت پرستیژ، رنگ کارت وام دانشجویی ردا و وکتور <span class="ss03">+45</span> لوگوی فروشگاه‌ها.</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-secondary-400 font-black mt-0.5">✦</span>
+              <span><strong class="text-white font-bold">تصویرسازی، بیلبورد و محیطی:</strong> تصویرسازی لندینگ‌ها (پذیرندگان، Smart SMS، اعتبار)، بیلبورد «اوانو اعتبارته»، کمپین یلدا/پاییز RBT و گرافیک محیطی ساختمان شرکت.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- کارت ۲: موشن دیزاین، Lottie و کمپین‌های محیطی (پارسا نوایی - 65 تسک Done در ۱۴۰۵) -->
+      <div class="exec-card p-6 rounded-3xl bg-white/[0.03] border border-white/10 hover:border-primary-500/50 backdrop-blur-2xl shadow-glass flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between mb-4">
+            <div>
+              <span class="text-[10px] font-extrabold text-primary-300 bg-primary-500/15 px-2.5 py-0.5 rounded-full border border-primary-500/30 ss03">65 تسک Done ۱۴۰۵ • 139 روز فعال</span>
+              <h3 class="text-base font-black text-white mt-1.5">موشن دیزاین، Lottie و بیلبورد</h3>
+            </div>
+            <span class="text-xs font-bold text-slate-300 bg-white/5 px-2.5 py-1 rounded-lg">پارسا نوایی</span>
+          </div>
+
+          <ul class="space-y-2.5 text-xs text-slate-300 leading-relaxed border-t border-white/10 pt-3.5">
+            <li class="flex items-start gap-2">
+              <span class="text-primary-400 font-black mt-0.5">✦</span>
+              <span><strong class="text-white font-bold">انیمیشن‌های تعاملی محصول (Lottie):</strong> طراحی و انیمیت لودینگ‌های هوش مصنوعی «زیرا» (Lottie A/B)، اسپلش و لودینگ جام جهانی <span class="ss03">2026</span>، وب‌سایت API Console و تامین اجتماعی.</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-primary-400 font-black mt-0.5">✦</span>
+              <span><strong class="text-white font-bold">موشن‌گرافیک و تیزرهای تبلیغاتی:</strong> ساخت موشن‌گرافیک اختصاصی «اعتبار پرستیژ»، کلیپ‌های معرفی و فعالسازی آوای انتظار (RBT)، موشن فیچر لوکیشن و خلافی خودرو.</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-primary-400 font-black mt-0.5">✦</span>
+              <span><strong class="text-white font-bold">بیلبوردهای شهری و پیکتوگرام‌ها:</strong> طراحی بیلبوردهای کمپین اعتبار <span class="ss03">4+2</span> و <span class="ss03">6</span> قسطه، موکاپ شهری «اوانو اعتبارته»، گایدلاین MCI Ads و طراحی <span class="ss03">23</span> آیکون دسته‌بندی فروشگاه‌ها.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- کارت ۳: طراحی گرافیک، برند کارفرمایی و کمپین‌ها (مهران سلطان‌محمدی - 110 تسک Done در ۱۴۰۵) -->
+      <div class="exec-card p-6 rounded-3xl bg-gradient-to-b from-primary-500/15 to-white/[0.02] border border-primary-500/35 hover:border-primary-400 backdrop-blur-2xl shadow-glass flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between mb-4">
+            <div>
+              <span class="text-[10px] font-extrabold text-secondary-300 bg-secondary-400/20 px-2.5 py-0.5 rounded-full border border-secondary-400/30 ss03">110 تسک Done ۱۴۰۵ • 113 روز فعال</span>
+              <h3 class="text-base font-black text-white mt-1.5">گرافیک، کمپین‌ها و برند کارفرمایی</h3>
+            </div>
+            <span class="text-xs font-bold text-slate-300 bg-white/5 px-2.5 py-1 rounded-lg">مهران سلطان‌محمدی</span>
+          </div>
+
+          <ul class="space-y-2.5 text-xs text-slate-300 leading-relaxed border-t border-white/10 pt-3.5">
+            <li class="flex items-start gap-2">
+              <span class="text-secondary-400 font-black mt-0.5">✦</span>
+              <span><strong class="text-white font-bold">هویت بصری کمپین جام جهانی:</strong> طراحی لوگو و لوگوتایپ فارسی جام جهانی، پترن‌ها، بک‌گراندها، اسلایدرهای همراه من و ویژوال جوایز.</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-secondary-400 font-black mt-0.5">✦</span>
+              <span><strong class="text-white font-bold">کتابچه‌های سازمانی و پرزنتیشن اوانو:</strong> صفحه‌آرایی چاپی و دیجیتال «هندبوک جامعه‌پذیری»، «کد رفتار حرفه‌ای»، پوستر شایستگی‌ها، گزارش IDP، آیکون معاونت دیتا و پرزنتیشن اوانو.</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-secondary-400 font-black mt-0.5">✦</span>
+              <span><strong class="text-white font-bold">+43 کمپین سوشال و فرهنگ سازمانی:</strong> تصویرسازی کیف پول ایران، کمپین هوش مصنوعی صوتی همراه اول، ایونت «هم‌صدا» و پوشش کامل شبکه‌های اجتماعی و HR.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- نوار پایین: کارگردانی هنری و اجرای مستقیم صدرا بهبودی -->
+    <div class="p-4 rounded-2xl bg-surface-900/80 border border-white/10 backdrop-blur-xl flex flex-col lg:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-2.5">
+        <span class="w-2.5 h-2.5 rounded-full bg-secondary-400 shadow-glow-secondary"></span>
+        <span class="text-xs font-extrabold text-white">کارگردانی هنری و اجرای استراتژیک (صدرا بهبودی):</span>
+        <span class="text-xs text-slate-300">نظارت و کورکسیون نهایی تمام خروجی‌ها + اجرای مستقیم طراحی <strong class="text-white">اوانو کارت جدید (بانک ملت)</strong>، کارت‌های رفاهی، پلاک‌های ایبکام و <span class="ss03">141</span> تسک تخصصی در جیرا.</span>
+      </div>
+      <div class="px-3.5 py-1.5 rounded-xl bg-secondary-400/10 border border-secondary-400/30 text-secondary-300 text-xs font-heavy shrink-0">
+        صرفه‌جویی ۱۰۰٪ در هزینه‌های برون‌سپاری آژانس‌ها
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ==================== SLIDE 7: ماتریس ارزش‌آفرینی سازمانی و چشم‌انداز استراتژیک ۱۴۰۵ ==================== -->
+<section class="slide absolute inset-0 px-12 lg:px-20 pt-20 pb-24 flex flex-col justify-center" data-slide="7">
+  <div class="max-w-7xl mx-auto w-full">
+
+    <!-- هدر اسلاید + آمار تجمیعی کل تیم در سال ۱۴۰۵ -->
+    <div class="flex flex-col lg:flex-row lg:items-end justify-between mb-6 gap-4">
+      <div>
+        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-primary-500/10 border border-primary-500/30 text-primary-300 text-xs font-bold mb-2 ss03">
+          <span>07 / جمع‌بندی مدیریتی و بازگشت سرمایه در سال ۱۴۰۵ (ROI & Cross-Unit Impact)</span>
+        </div>
+        <h2 class="text-2xl lg:text-4xl font-heavy text-white">
+          ارزش‌آفرینی چهاروجهی <span class="text-primary-400">تیم خلاقیت</span> در مقیاس کل سازمان
+        </h2>
+      </div>
+
+      <!-- آمار کلان تجمیعی سال ۱۴۰۵ -->
+      <div class="grid grid-cols-3 gap-3 shrink-0">
+        <div class="px-4 py-2 rounded-2xl bg-primary-500/15 border border-primary-500/30 text-center">
+          <div class="text-xl font-heavy text-primary-400 ss03">419</div>
+          <div class="text-[10px] font-bold text-slate-300">تسک Done جیرا در ۱۴۰۵</div>
+        </div>
+        <div class="px-4 py-2 rounded-2xl bg-white/[0.04] border border-white/10 text-center">
+          <div class="text-xl font-heavy text-white ss03">871</div>
+          <div class="text-[10px] font-bold text-primary-300">نفر-روز کارکرد خالص</div>
+        </div>
+        <div class="px-4 py-2 rounded-2xl bg-secondary-400/15 border border-secondary-400/30 text-center">
+          <div class="text-xl font-heavy text-secondary-400 ss03">9</div>
+          <div class="text-[10px] font-bold text-slate-300">واحد سازمانی تحت پوشش</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ماتریس ۴ ستونه تاثیر تیم بر معاونت‌ها و واحدهای شرکت در سال ۱۴۰۵ -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 items-stretch mb-5">
+
+      <!-- ستون ۱: واحد محصول، اعتبار و خدمات اپراتوری -->
+      <div class="exec-card p-5 rounded-3xl bg-gradient-to-b from-primary-500/15 to-white/[0.02] border border-primary-500/35 hover:border-primary-400 backdrop-blur-2xl shadow-glass flex flex-col justify-between">
+        <div>
+          <div class="w-9 h-9 rounded-xl bg-primary-500/20 border border-primary-400/40 flex items-center justify-center text-primary-300 font-heavy text-sm mb-3 ss03">
+            01
+          </div>
+          <h3 class="text-sm font-black text-white mb-1">محصول، اعتبار و اپراتوری</h3>
+          <p class="text-[11px] font-semibold text-primary-300 mb-2.5">شتاب‌دهی به Time-to-Market</p>
+          <p class="text-xs text-slate-300 leading-relaxed border-t border-white/10 pt-2.5">
+            طراحی صفر تا صد فلوهای درآمدزا شامل اعتبار پرستیژ و CIP، اعتبارات ۴ و ۶ قسطه، تسهیلات تامین اجتماعی، وام دانشجویی «ردا»، قبوض تجمیعی، پینکت، فروشگاه اوانو، آوای انتظار (RBT) و پنل‌های API Console و Smart SMS.
+          </p>
+        </div>
+      </div>
+
+      <!-- ستون ۲: واحد فنی، مهندسی و هوش مصنوعی -->
+      <div class="exec-card p-5 rounded-3xl bg-white/[0.03] border border-white/10 hover:border-primary-500/50 backdrop-blur-xl shadow-glass flex flex-col justify-between">
+        <div>
+          <div class="w-9 h-9 rounded-xl bg-primary-500/15 border border-primary-500/30 flex items-center justify-center text-primary-400 font-heavy text-sm mb-3 ss03">
+            02
+          </div>
+          <h3 class="text-sm font-black text-white mb-1">فنی، دیتا و هوش مصنوعی</h3>
+          <p class="text-[11px] font-semibold text-slate-400 mb-2.5">کاهش بدهی فنی و دوباره‌کاری</p>
+          <p class="text-xs text-slate-300 leading-relaxed border-t border-white/10 pt-2.5">
+            معماری دیزاین سیستم، ساختار Design Guideline، داکیومنت تایپوگرافی و Color System، هویت بصری و انیمیشن‌های Lottie پلتفرم هوش مصنوعی «زیرا (Ziira AI)»، آیکون معاونت دیتا و استقرار فرآیند الزامی Design Check.
+          </p>
+        </div>
+      </div>
+
+      <!-- ستون ۳: واحد مارکتینگ، رشد و تبلیغات -->
+      <div class="exec-card p-5 rounded-3xl bg-gradient-to-b from-secondary-400/15 to-white/[0.02] border border-secondary-400/35 hover:border-secondary-400 backdrop-blur-2xl shadow-glass flex flex-col justify-between">
+        <div>
+          <div class="w-9 h-9 rounded-xl bg-secondary-400/20 border border-secondary-400/40 flex items-center justify-center text-secondary-300 font-heavy text-sm mb-3 ss03">
+            03
+          </div>
+          <h3 class="text-sm font-black text-white mb-1">مارکتینگ، رشد و برندینگ</h3>
+          <p class="text-[11px] font-semibold text-secondary-300 mb-2.5">بهینه‌سازی نرخ تبدیل (CRO)</p>
+          <p class="text-xs text-slate-300 leading-relaxed border-t border-white/10 pt-2.5">
+            خلق دیزاین سیستم لندینگ‌پیج‌ها و <span class="ss03">9</span> تمپلیت جامع کمپین، بیلبوردهای شهری «اوانو اعتبارته»، <span class="ss03">4+2</span> و <span class="ss03">6</span> قسطه، تحلیل Clarity، مگاپروژه جام جهانی <span class="ss03">2026</span>، غرفه نمایشگاه الکامپ و تیزرهای تبلیغاتی.
+          </p>
+        </div>
+      </div>
+
+      <!-- ستون ۴: منابع انسانی، استراتژی و لجستیک -->
+      <div class="exec-card p-5 rounded-3xl bg-white/[0.03] border border-white/10 hover:border-secondary-400/50 backdrop-blur-xl shadow-glass flex flex-col justify-between">
+        <div>
+          <div class="w-9 h-9 rounded-xl bg-secondary-400/15 border border-secondary-400/30 flex items-center justify-center text-secondary-400 font-heavy text-sm mb-3 ss03">
+            04
+          </div>
+          <h3 class="text-sm font-black text-white mb-1">منابع انسانی و استراتژی</h3>
+          <p class="text-[11px] font-semibold text-slate-400 mb-2.5">ارتقای برند کارفرمایی و هویت</p>
+          <p class="text-xs text-slate-300 leading-relaxed border-t border-white/10 pt-2.5">
+            خلق برندبوک پرستیژ، تایپ‌فیس همراه اول، اوانو کارت بانک ملت، صفحه‌آرایی هندبوک جامعه‌پذیری، کد رفتار حرفه‌ای، شایستگی‌ها، گزارش و تقدیرنامه‌های IDP، گرافیک محیطی ساختمان و ارائه‌های استراتژیک مدیرعامل.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- باکس نقشه راه آینده و پیام پایانی به مدیریت عامل -->
+    <div class="p-6 rounded-3xl bg-gradient-to-l from-primary-500/20 via-surface-900/90 to-secondary-400/15 border border-primary-500/40 backdrop-blur-2xl shadow-glass flex flex-col lg:flex-row items-center justify-between gap-6">
+      <div class="space-y-1.5">
+        <div class="inline-flex items-center gap-2 text-xs font-extrabold text-primary-300">
+          <span class="w-2 h-2 rounded-full bg-secondary-400 animate-ping"></span>
+          <span>چشم‌انداز و گام‌های استراتژیک پیش رو (Next Horizon 1405)</span>
+        </div>
+        <h3 class="text-lg lg:text-xl font-black text-white">
+          تکمیل یکپارچگی دیزاین سیستم، توسعه محصولات مبتنی بر AI (زیرا) و بهینه‌سازی داده‌محور نرخ تبدیل
+        </h3>
+        <p class="text-xs text-slate-300 leading-relaxed max-w-3xl">
+          تیم خلاقیت و طراحی محصول با تکیه بر بلوغ ساختاری، مستندسازی کامل و پوشش ۳۶۰ درجه، آماده پذیرش مسئولیت‌های کلان‌تر در تصمیم‌گیری‌های استراتژیک محصول و برند سازمان است.
+        </p>
+      </div>
+
+      <div class="flex items-center gap-3 shrink-0">
+        <div class="px-5 py-3 rounded-2xl bg-primary-500 text-surface-950 font-heavy text-xs shadow-glow-primary ss03">
+          تیم خلاقیت و طراحی محصول • ۱۴۰۵
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ==================== SLIDE 8: نمودار ستونی عمودی و دونات عملکرد اعضا در سال ۱۴۰۵ ==================== -->
+<section class="slide absolute inset-0 px-12 lg:px-20 pt-20 pb-24 flex flex-col justify-center" data-slide="8">
+  <div class="max-w-7xl mx-auto w-full">
+
+    <!-- هدر اسلاید + راهنمای نمودار -->
+    <div class="flex flex-col lg:flex-row lg:items-end justify-between mb-5 gap-4">
+      <div>
+        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-primary-500/10 border border-primary-500/30 text-primary-300 text-xs font-bold mb-2 ss03">
+          <span>08 / آنالیتیکس عملکرد فردی در سال ۱۴۰۵ (Individual Performance Vertical Chart)</span>
+        </div>
+        <h2 class="text-2xl lg:text-4xl font-heavy text-white">
+          مقایسه ستونی <span class="text-primary-400">روزهای کاری فعال</span> و <span class="text-secondary-400">تسک‌های Done جیرا</span> (۱۴۰۵)
+        </h2>
+      </div>
+
+      <!-- Legend -->
+      <div class="flex flex-wrap items-center gap-4 bg-surface-900/90 border border-white/10 px-4 py-2.5 rounded-2xl backdrop-blur-xl">
+        <div class="flex items-center gap-2 text-xs font-bold text-slate-200">
+          <span class="w-3 h-3 rounded-sm bg-gradient-to-t from-primary-600 to-primary-400 shadow-glow-primary"></span>
+          <span>روزهای کاری فعال (شیت ۱۴۰۵)</span>
+        </div>
+        <div class="h-4 w-[1px] bg-white/10"></div>
+        <div class="flex items-center gap-2 text-xs font-bold text-slate-200">
+          <span class="w-3 h-3 rounded-sm bg-gradient-to-t from-secondary-500 to-secondary-300 shadow-glow-secondary"></span>
+          <span>تسک‌های Done جیرا (از ۱ فروردین ۱۴۰۵)</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- گرید اصلی: نمودار ستونی عمودی (8 ستون) + کارت دونات SVG و آمار توصیفی (4 ستون) -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-5 items-stretch">
+
+      <!-- بخش راست (8 ستون): نمودار ستونی عمودی (Vertical Grouped Column Chart) -->
+      <div class="lg:col-span-8 p-6 rounded-3xl bg-surface-900/75 border border-white/10 backdrop-blur-2xl shadow-glass flex flex-col justify-between relative overflow-hidden">
+        
+        <!-- عنوان بالای چارت -->
+        <div class="flex items-center justify-between text-xs text-slate-400 mb-2 ss03">
+          <span class="font-bold text-slate-300">نمودار مقایسه‌ای ۸ عضو تیم (مقیاس ۰ تا ۱۶۰)</span>
+          <span>بیشینه حضور: ۱۴۸ روز (امیرحسام خالویی) | بیشینه تسک ۱۴۰۵: ۱۱۰ تسک (مهران سلطان‌محمدی)</span>
+        </div>
+
+        <!-- ناحیه رسم ستون‌ها + خطوط راهنمای افقی (Grid Lines) -->
+        <div class="relative h-64 w-full pt-6 pb-2 flex items-end justify-around gap-2 border-b border-white/15">
+          
+          <!-- خطوط افقی پس‌زمینه (Y-Axis Gridlines) -->
+          <div class="absolute inset-x-0 top-6 bottom-0 flex flex-col justify-between pointer-events-none z-0 ss03">
+            <div class="border-b border-dashed border-white/10 w-full flex justify-end"><span class="text-[10px] text-slate-500 -mt-3.5 bg-surface-900/80 px-1">150</span></div>
+            <div class="border-b border-dashed border-white/10 w-full flex justify-end"><span class="text-[10px] text-slate-500 -mt-3.5 bg-surface-900/80 px-1">100</span></div>
+            <div class="border-b border-dashed border-white/10 w-full flex justify-end"><span class="text-[10px] text-slate-500 -mt-3.5 bg-surface-900/80 px-1">50</span></div>
+            <div class="w-full"></div>
+          </div>
+
+          <!-- ستون ۱: امیرحسام خالویی (148 روز | 67 تسک ۱۴۰۵) -->
+          <div class="relative z-10 flex flex-col items-center group w-full h-full justify-end">
+            <div class="flex items-end justify-center gap-1.5 w-full h-full">
+              <!-- ستون روزها -->
+              <div class="w-5 lg:w-6 bg-gradient-to-t from-primary-600 to-primary-400 rounded-t-xl shadow-glow-primary transition-all duration-300 group-hover:brightness-125 flex flex-col items-center justify-start pt-1" style="height: 98%">
+                <span class="text-[10px] font-heavy text-surface-950 ss03">148</span>
+              </div>
+              <!-- ستون تسک‌ها -->
+              <div class="w-5 lg:w-6 bg-gradient-to-t from-secondary-500 to-secondary-300 rounded-t-xl shadow-glow-secondary transition-all duration-300 group-hover:brightness-125 flex flex-col items-center justify-start pt-1" style="height: 45%">
+                <span class="text-[10px] font-heavy text-surface-950 ss03">67</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- ستون ۲: مهران سلطان‌محمدی (113 روز | 110 تسک ۱۴۰۵) -->
+          <div class="relative z-10 flex flex-col items-center group w-full h-full justify-end">
+            <div class="flex items-end justify-center gap-1.5 w-full h-full">
+              <div class="w-5 lg:w-6 bg-gradient-to-t from-primary-600/90 to-primary-400/90 rounded-t-xl transition-all duration-300 group-hover:brightness-125 flex flex-col items-center justify-start pt-1" style="height: 75%">
+                <span class="text-[10px] font-heavy text-surface-950 ss03">113</span>
+              </div>
+              <div class="w-5 lg:w-6 bg-gradient-to-t from-secondary-500 to-secondary-300 rounded-t-xl shadow-glow-secondary transition-all duration-300 group-hover:brightness-125 flex flex-col items-center justify-start pt-1" style="height: 73%">
+                <span class="text-[10px] font-heavy text-surface-950 ss03">110</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- ستون ۳: امیرحسین فراهانی (126 روز | 80 تسک ۱۴۰۵) -->
+          <div class="relative z-10 flex flex-col items-center group w-full h-full justify-end">
+            <div class="flex items-end justify-center gap-1.5 w-full h-full">
+              <div class="w-5 lg:w-6 bg-gradient-to-t from-primary-600/90 to-primary-400/90 rounded-t-xl transition-all duration-300 group-hover:brightness-125 flex flex-col items-center justify-start pt-1" style="height: 84%">
+                <span class="text-[10px] font-heavy text-surface-950 ss03">126</span>
+              </div>
+              <div class="w-5 lg:w-6 bg-gradient-to-t from-secondary-500/90 to-secondary-300/90 rounded-t-xl transition-all duration-300 group-hover:brightness-125 flex flex-col items-center justify-start pt-1" style="height: 53%">
+                <span class="text-[10px] font-heavy text-surface-950 ss03">80</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- ستون ۴: مینا شافعی (118 روز | 71 تسک ۱۴۰۵) -->
+          <div class="relative z-10 flex flex-col items-center group w-full h-full justify-end">
+            <div class="flex items-end justify-center gap-1.5 w-full h-full">
+              <div class="w-5 lg:w-6 bg-gradient-to-t from-primary-600/90 to-primary-400/90 rounded-t-xl transition-all duration-300 group-hover:brightness-125 flex flex-col items-center justify-start pt-1" style="height: 78%">
+                <span class="text-[10px] font-heavy text-surface-950 ss03">118</span>
+              </div>
+              <div class="w-5 lg:w-6 bg-gradient-to-t from-secondary-500/90 to-secondary-300/90 rounded-t-xl transition-all duration-300 group-hover:brightness-125 flex flex-col items-center justify-start pt-1" style="height: 47%">
+                <span class="text-[10px] font-heavy text-surface-950 ss03">71</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- ستون ۵: پارسا نوایی (139 روز | 65 تسک ۱۴۰۵) -->
+          <div class="relative z-10 flex flex-col items-center group w-full h-full justify-end">
+            <div class="flex items-end justify-center gap-1.5 w-full h-full">
+              <div class="w-5 lg:w-6 bg-gradient-to-t from-primary-600 to-primary-400 rounded-t-xl shadow-glow-primary transition-all duration-300 group-hover:brightness-125 flex flex-col items-center justify-start pt-1" style="height: 92%">
+                <span class="text-[10px] font-heavy text-surface-950 ss03">139</span>
+              </div>
+              <div class="w-5 lg:w-6 bg-gradient-to-t from-secondary-500/90 to-secondary-300/90 rounded-t-xl transition-all duration-300 group-hover:brightness-125 flex flex-col items-center justify-start pt-1" style="height: 43%">
+                <span class="text-[10px] font-heavy text-surface-950 ss03">65</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- ستون ۶: افسانه میررستمی (132 روز | 17 اپیک کلان ۱۴۰۵) -->
+          <div class="relative z-10 flex flex-col items-center group w-full h-full justify-end">
+            <div class="flex items-end justify-center gap-1.5 w-full h-full">
+              <div class="w-5 lg:w-6 bg-gradient-to-t from-primary-600/90 to-primary-400/90 rounded-t-xl transition-all duration-300 group-hover:brightness-125 flex flex-col items-center justify-start pt-1" style="height: 88%">
+                <span class="text-[10px] font-heavy text-surface-950 ss03">132</span>
+              </div>
+              <div class="w-5 lg:w-6 bg-gradient-to-t from-secondary-500/90 to-secondary-300/90 rounded-t-xl transition-all duration-300 group-hover:brightness-125 flex flex-col items-center justify-start pt-1" style="height: 22%">
+                <span class="text-[10px] font-heavy text-surface-950 ss03">17*</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- ستون ۷: راهبری (علیرضا خطیبی و صدرا بهبودی) -->
+          <div class="relative z-10 flex flex-col items-center group w-full h-full justify-end">
+            <div class="flex items-end justify-center gap-1.5 w-full h-full">
+              <div class="w-5 lg:w-6 bg-gradient-to-t from-primary-600/90 to-primary-400/90 rounded-t-xl transition-all duration-300 group-hover:brightness-125 flex flex-col items-center justify-start pt-1" style="height: 64%">
+                <span class="text-[10px] font-heavy text-surface-950 ss03">95</span>
+              </div>
+              <div class="w-5 lg:w-6 bg-gradient-to-t from-secondary-500/90 to-secondary-300/90 rounded-t-xl transition-all duration-300 group-hover:brightness-125 flex flex-col items-center justify-start pt-1" style="height: 20%">
+                <span class="text-[10px] font-heavy text-surface-950 ss03">9+</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- برچسب‌های محور افقی (X-Axis Labels) -->
+        <div class="grid grid-cols-7 gap-1 pt-3 text-center">
+          <div>
+            <div class="text-[11px] font-black text-white">امیرحسام خالویی</div>
+            <div class="text-[9px] text-primary-300">طراح محصول (112 کل)</div>
+          </div>
+          <div>
+            <div class="text-[11px] font-black text-white">مهران سلطان‌محمدی</div>
+            <div class="text-[9px] text-secondary-300">طراح گرافیک</div>
+          </div>
+          <div>
+            <div class="text-[11px] font-black text-white">امیرحسین فراهانی</div>
+            <div class="text-[9px] text-secondary-300">آرت دیزاینر</div>
+          </div>
+          <div>
+            <div class="text-[11px] font-black text-white">مینا شافعی</div>
+            <div class="text-[9px] text-primary-300">طراح محصول</div>
+          </div>
+          <div>
+            <div class="text-[11px] font-black text-white">پارسا نوایی</div>
+            <div class="text-[9px] text-secondary-300">موشن دیزاینر</div>
+          </div>
+          <div>
+            <div class="text-[11px] font-black text-white">افسانه میررستمی</div>
+            <div class="text-[9px] text-primary-300">17 اپیک (9 تمپلیت)</div>
+          </div>
+          <div>
+            <div class="text-[11px] font-black text-white">صدرا و علیرضا</div>
+            <div class="text-[9px] text-slate-400">راهبری (194 کل)</div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- بخش چپ (4 ستون): چارت حلقه‌ای دونات SVG + شاخص‌های آماری ۱۴۰۵ -->
+      <div class="lg:col-span-4 flex flex-col justify-between gap-4">
+
+        <!-- کارت ۱: نمودار دونات (Donut Chart) تفکیک دو بازوی تیم در سال ۱۴۰۵ -->
+        <div class="exec-card p-5 rounded-3xl bg-gradient-to-br from-surface-900/95 to-white/[0.02] border border-white/10 backdrop-blur-2xl shadow-glass">
+          <div class="flex items-center justify-between mb-3">
+            <span class="text-xs font-extrabold text-white">سهم دو بازو از ۴۱۹ تسک ۱۴۰۵</span>
+            <span class="text-[10px] font-heavy text-primary-300 bg-primary-500/15 px-2.5 py-0.5 rounded-full ss03">Donut Chart</span>
+          </div>
+
+          <div class="flex items-center gap-4">
+            <!-- SVG Donut -->
+            <div class="relative w-28 h-28 shrink-0 flex items-center justify-center">
+              <svg class="w-full h-full -rotate-90" viewBox="0 0 36 36">
+                <!-- حلقه پس‌زمینه -->
+                <circle cx="18" cy="18" r="15.915" fill="transparent" stroke="rgba(255,255,255,0.06)" stroke-width="3.8"></circle>
+                <!-- سهم آرت، موشن و گرافیک: 63% -->
+                <circle cx="18" cy="18" r="15.915" fill="transparent" stroke="#FF8A34" stroke-width="3.8" stroke-dasharray="63 37" stroke-dashoffset="0" stroke-linecap="round"></circle>
+                <!-- سهم طراحی محصول: 37% -->
+                <circle cx="18" cy="18" r="15.915" fill="transparent" stroke="#00A693" stroke-width="3.8" stroke-dasharray="37 63" stroke-dashoffset="-63" stroke-linecap="round"></circle>
+              </svg>
+              <div class="absolute inset-0 flex flex-col items-center justify-center text-center ss03">
+                <span class="text-lg font-heavy text-white leading-none">419</span>
+                <span class="text-[9px] text-slate-400 mt-0.5">تسک ۱۴۰۵</span>
+              </div>
+            </div>
+
+            <!-- جزئیات کنار دونات -->
+            <div class="space-y-2.5 text-xs w-full ss03">
+              <div class="p-2 rounded-xl bg-secondary-400/10 border border-secondary-400/25">
+                <div class="flex items-center justify-between font-black text-secondary-300">
+                  <span>آرت، موشن و گرافیک</span>
+                  <span>63%</span>
+                </div>
+                <div class="text-[10px] text-slate-300 mt-0.5">264 تسک Done در ۱۴۰۵</div>
+              </div>
+              <div class="p-2 rounded-xl bg-primary-500/10 border border-primary-500/25">
+                <div class="flex items-center justify-between font-black text-primary-300">
+                  <span>طراحی محصول (اپیک‌ها)</span>
+                  <span>37%</span>
+                </div>
+                <div class="text-[10px] text-slate-300 mt-0.5">155 اپیک و فلو در ۱۴۰۵</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- کارت ۲: آمار توصیفی حضور و ظرفیت تیم (Statistical Summary) -->
+        <div class="exec-card p-5 rounded-3xl bg-gradient-to-br from-primary-500/15 to-white/[0.02] border border-primary-500/35 backdrop-blur-2xl shadow-glass">
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-xs font-extrabold text-primary-300">شاخص‌های آماری حضور (۸ ماه ۱۴۰۵)</span>
+            <span class="text-[11px] font-heavy text-white bg-white/10 px-2.5 py-0.5 rounded-full ss03">871 نفر-روز</span>
+          </div>
+
+          <div class="grid grid-cols-3 gap-2 pt-2 text-center ss03">
+            <div class="p-2.5 rounded-2xl bg-surface-950/70 border border-white/10">
+              <div class="text-base font-heavy text-primary-400">124.4</div>
+              <div class="text-[10px] text-slate-400 mt-0.5">میانگین (روز)</div>
+            </div>
+            <div class="p-2.5 rounded-2xl bg-surface-950/70 border border-white/10">
+              <div class="text-base font-heavy text-white">126.0</div>
+              <div class="text-[10px] text-slate-400 mt-0.5">میانه (روز)</div>
+            </div>
+            <div class="p-2.5 rounded-2xl bg-surface-950/70 border border-white/10">
+              <div class="text-base font-heavy text-secondary-400">148</div>
+              <div class="text-[10px] text-slate-400 mt-0.5">بیشینه (روز)</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ==================== SLIDE 9: آنالیتیکس سهم واحدهای درخواست‌دهنده سازمان در سال ۱۴۰۵ ==================== -->
+<section class="slide absolute inset-0 px-12 lg:px-20 pt-20 pb-24 flex flex-col justify-center" data-slide="9">
+  <div class="max-w-7xl mx-auto w-full">
+
+    <!-- هدر اسلاید -->
+    <div class="flex flex-col lg:flex-row lg:items-end justify-between mb-6 gap-4">
+      <div>
+        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-secondary-400/10 border border-secondary-400/30 text-secondary-300 text-xs font-bold mb-2 ss03">
+          <span>09 / آنالیتیکس تقاضای سازمانی در سال ۱۴۰۵ (Cross-Department Demand Analytics)</span>
+        </div>
+        <h2 class="text-2xl lg:text-4xl font-heavy text-white">
+          توزیع <span class="text-primary-400">۴۱۹ تسک سال ۱۴۰۵</span> به تفکیک <span class="text-secondary-400">۹ واحد درخواست‌دهنده</span>
+        </h2>
+      </div>
+      <p class="text-xs lg:text-sm text-slate-400 max-w-md leading-relaxed">
+        تیم خلاقیت و طراحی محصول به عنوان یک هاب مرکزی (Shared Service Hub)، نیازهای طراحی و محصولی تمام معاونت‌ها را پوشش داده است:
+      </p>
+    </div>
+
+    <!-- گرید اصلی: چارت حلقه‌ای ۵ بخشی (5 ستون) + کارت‌های تفکیک واحدها (7 ستون) -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
+
+      <!-- ستون راست (5 از 12): نمودار حلقه‌ای چندلایه (Multi-Ring Radial SVG Chart) -->
+      <div class="lg:col-span-5 p-6 rounded-3xl bg-surface-900/80 border border-white/10 backdrop-blur-2xl shadow-glass flex flex-col items-center justify-between">
+        
+        <div class="w-full flex items-center justify-between text-xs mb-2">
+          <span class="font-black text-white">سهم واحدها از کل خروجی ۱۴۰۵</span>
+          <span class="px-2.5 py-0.5 rounded-full bg-white/10 text-primary-300 font-heavy ss03">100% Verified</span>
+        </div>
+
+        <!-- گرافیک SVG چندحلقه‌ای (Concentric Radial Gauges) -->
+        <div class="relative w-56 h-56 my-2 flex items-center justify-center">
+          <svg class="w-full h-full -rotate-90" viewBox="0 0 120 120">
+            <!-- حلقه ۱ (بیرونی): مارکتینگ 53.7% -->
+            <circle cx="60" cy="60" r="52" fill="transparent" stroke="rgba(255,255,255,0.05)" stroke-width="7"></circle>
+            <circle cx="60" cy="60" r="52" fill="transparent" stroke="#FF8A34" stroke-width="7" stroke-dasharray="175 326" stroke-linecap="round"></circle>
+
+            <!-- حلقه ۲: واحد محصول 22.0% -->
+            <circle cx="60" cy="60" r="41" fill="transparent" stroke="rgba(255,255,255,0.05)" stroke-width="7"></circle>
+            <circle cx="60" cy="60" r="41" fill="transparent" stroke="#00A693" stroke-width="7" stroke-dasharray="90 257" stroke-linecap="round"></circle>
+
+            <!-- حلقه ۳: منابع انسانی 9.5% -->
+            <circle cx="60" cy="60" r="30" fill="transparent" stroke="rgba(255,255,255,0.05)" stroke-width="7"></circle>
+            <circle cx="60" cy="60" r="30" fill="transparent" stroke="#38bdf8" stroke-width="7" stroke-dasharray="45 188" stroke-linecap="round"></circle>
+
+            <!-- حلقه ۴ (داخلی): خدمات دیجیتال و اپراتوری 14.8% -->
+            <circle cx="60" cy="60" r="19" fill="transparent" stroke="rgba(255,255,255,0.05)" stroke-width="7"></circle>
+            <circle cx="60" cy="60" r="19" fill="transparent" stroke="#a855f7" stroke-width="7" stroke-dasharray="40 119" stroke-linecap="round"></circle>
+          </svg>
+
+          <!-- مرکز رادیال -->
+          <div class="absolute inset-0 flex flex-col items-center justify-center text-center ss03 pointer-events-none">
+            <span class="text-xl font-heavy text-white">9</span>
+            <span class="text-[9px] font-bold text-slate-400">واحد سازمانی</span>
+          </div>
+        </div>
+
+        <!-- راهنمای حلقه‌ها -->
+        <div class="w-full grid grid-cols-2 gap-2 pt-3 border-t border-white/10 text-[11px] ss03">
+          <div class="flex items-center gap-2">
+            <span class="w-2.5 h-2.5 rounded-full bg-[#FF8A34]"></span>
+            <span class="text-slate-300">مارکتینگ: <strong class="text-white">53.7%</strong></span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="w-2.5 h-2.5 rounded-full bg-[#00A693]"></span>
+            <span class="text-slate-300">محصول: <strong class="text-white">22.0%</strong></span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="w-2.5 h-2.5 rounded-full bg-[#38bdf8]"></span>
+            <span class="text-slate-300">منابع انسانی: <strong class="text-white">9.5%</strong></span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="w-2.5 h-2.5 rounded-full bg-[#a855f7]"></span>
+            <span class="text-slate-300">دیجیتال و اپراتور: <strong class="text-white">14.8%</strong></span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ستون چپ (7 از 12): کارت‌های تفکیک حجم کار و نوع خروجی برای هر معاونت -->
+      <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4">
+
+        <!-- واحد ۱: مارکتینگ (225 تسک) -->
+        <div class="exec-card p-5 rounded-3xl bg-gradient-to-br from-secondary-400/15 to-white/[0.02] border border-secondary-400/35 backdrop-blur-xl flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-2 ss03">
+              <span class="px-2.5 py-0.5 rounded-lg bg-secondary-400/20 text-secondary-300 text-xs font-heavy">رتبه ۱ تقاضا • 53.7%</span>
+              <span class="text-2xl font-heavy text-white">225 <span class="text-xs font-normal text-slate-400">تسک</span></span>
+            </div>
+            <h3 class="text-sm font-black text-white mb-1.5">واحد مارکتینگ و کمپین‌ها (Marketing)</h3>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              لندینگ‌پیج‌های کمپین‌های اعتبار و الکامپ، ۹ تمپلیت جامع لندینگ، بیلبوردهای شهری، بنرهای MyMCI، موشن‌گرافیک‌ها و بیش از ۶۹ گرافیک سوشال مدیا.
+            </p>
+          </div>
+          <div class="w-full bg-white/10 h-1.5 rounded-full mt-3 overflow-hidden">
+            <div class="bg-secondary-400 h-full rounded-full" style="width: 100%"></div>
+          </div>
+        </div>
+
+        <!-- واحد ۲: محصول (92 تسک) -->
+        <div class="exec-card p-5 rounded-3xl bg-gradient-to-br from-primary-500/15 to-white/[0.02] border border-primary-500/35 backdrop-blur-xl flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-2 ss03">
+              <span class="px-2.5 py-0.5 rounded-lg bg-primary-500/20 text-primary-300 text-xs font-heavy">رتبه ۲ تقاضا • 22.0%</span>
+              <span class="text-2xl font-heavy text-white">92 <span class="text-xs font-normal text-slate-400">اپیک و تسک</span></span>
+            </div>
+            <h3 class="text-sm font-black text-white mb-1.5">واحد محصول و اعتبار (Product)</h3>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              معماری یوزرفلوها و UI سرویس‌های اعتبار پرستیژ، ۴ و ۶ قسطه، تامین اجتماعی، فروشگاه اوانو، وام دانشجویی ردا، قبوض تجمیعی، پینکت و دیزاین سیستم.
+            </p>
+          </div>
+          <div class="w-full bg-white/10 h-1.5 rounded-full mt-3 overflow-hidden">
+            <div class="bg-primary-400 h-full rounded-full" style="width: 65%"></div>
+          </div>
+        </div>
+
+        <!-- واحد ۳: منابع انسانی و برند کارفرمایی (40 تسک) -->
+        <div class="exec-card p-5 rounded-3xl bg-white/[0.03] border border-white/10 backdrop-blur-xl flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-2 ss03">
+              <span class="px-2.5 py-0.5 rounded-lg bg-sky-500/20 text-sky-300 text-xs font-heavy">رتبه ۳ تقاضا • 9.5%</span>
+              <span class="text-2xl font-heavy text-white">40 <span class="text-xs font-normal text-slate-400">تسک</span></span>
+            </div>
+            <h3 class="text-sm font-black text-white mb-1.5">واحد منابع انسانی (Human Resource)</h3>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              طراحی و صفحه‌آرایی چاپی/دیجیتال هندبوک جامعه‌پذیری، کد رفتار حرفه‌ای، پوسترهای شایستگی‌ها، گزارش و تقدیرنامه‌های IDP، ولکام پکیج و مناسبت‌ها.
+            </p>
+          </div>
+          <div class="w-full bg-white/10 h-1.5 rounded-full mt-3 overflow-hidden">
+            <div class="bg-sky-400 h-full rounded-full" style="width: 38%"></div>
+          </div>
+        </div>
+
+        <!-- واحد ۴: خدمات دیجیتال، اپراتوری، AI و استراتژی (62 تسک مجموع) -->
+        <div class="exec-card p-5 rounded-3xl bg-white/[0.03] border border-white/10 backdrop-blur-xl flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-2 ss03">
+              <span class="px-2.5 py-0.5 rounded-lg bg-purple-500/20 text-purple-300 text-xs font-heavy">۶ واحد تخصصی • 14.8%</span>
+              <span class="text-2xl font-heavy text-white">62 <span class="text-xs font-normal text-slate-400">تسک</span></span>
+            </div>
+            <h3 class="text-sm font-black text-white mb-1.5">دیجیتال، اپراتوری، هوش مصنوعی و استراتژی</h3>
+            <p class="text-xs text-slate-300 leading-relaxed ss03">
+              • <strong class="text-white">خدمات دیجیتال (35 تسک):</strong> وب‌سایت و پنل API Console و Smart SMS<br>
+              • <strong class="text-white">اپراتوری (19 تسک):</strong> موبایل و دسکتاپ آوای انتظار (RBT) و کمپین‌ها<br>
+              • <strong class="text-white">هوش مصنوعی، دیتا، استراتژی، فنی و لجستیک (8 تسک):</strong> زیرا، PMO و محیطی
+            </p>
+          </div>
+          <div class="w-full bg-white/10 h-1.5 rounded-full mt-3 overflow-hidden">
+            <div class="bg-purple-400 h-full rounded-full" style="width: 48%"></div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ==================== SLIDE 10: نمودار موجی روند ماهانه و ماتریس ترکیب خروجی‌ها (۱۴۰۵) ==================== -->
+<section class="slide absolute inset-0 px-12 lg:px-20 pt-20 pb-24 flex flex-col justify-center" data-slide="10">
+  <div class="max-w-7xl mx-auto w-full">
+
+    <!-- هدر اسلاید -->
+    <div class="flex flex-col lg:flex-row lg:items-end justify-between mb-5 gap-4">
+      <div>
+        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-primary-500/10 border border-primary-500/30 text-primary-300 text-xs font-bold mb-2 ss03">
+          <span>10 / آنالیتیکس روند زمانی و سبد خروجی‌ها (Monthly Velocity & Deliverable Mix 1405)</span>
+        </div>
+        <h2 class="text-2xl lg:text-4xl font-heavy text-white">
+          روند ماهانه <span class="text-primary-400">تولید در ۸ ماه</span> و <span class="text-secondary-400">ماتریس تخصصی خروجی‌ها</span>
+        </h2>
+      </div>
+      <div class="px-4 py-2 rounded-2xl bg-surface-900/90 border border-white/10 text-xs text-slate-300 ss03">
+        <span>تحول استراتژیک نیمه دوم: گذار از تسک‌های خرد به <strong class="text-primary-300">مگاپروژه‌ها و اپیک‌های کلان</strong></span>
+      </div>
+    </div>
+
+    <!-- گرید اصلی: نمودار موجی روند ۸ ماهه (7 ستون) + ماتریس موزاییکی نوع خروجی‌ها (5 ستون) -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-5 items-stretch">
+
+      <!-- ستون راست (7 از 12): نمودار موجی (SVG Area & Spline Wave Chart) روند ۸ ماهه ۱۴۰۵ -->
+      <div class="lg:col-span-7 p-6 rounded-3xl bg-surface-900/80 border border-white/10 backdrop-blur-2xl shadow-glass flex flex-col justify-between">
+        
+        <div class="flex items-center justify-between mb-2">
+          <div>
+            <h3 class="text-sm font-black text-white">نمودار موجی روند تسک‌های جیرا (فروردین تا آبان ۱۴۰۵)</h3>
+            <p class="text-[11px] text-slate-400 mt-0.5">پیک بهار: ۲۴۰ تسک در فصل اول | تمرکز تابستان و پاییز روی اپیک‌های سنگین (پرستیژ، ردا، لندینگ‌سیستم)</p>
+          </div>
+          <span class="px-3 py-1 rounded-xl bg-primary-500/15 border border-primary-500/30 text-primary-300 text-xs font-heavy ss03">Peak: 107</span>
+        </div>
+
+        <!-- گرافیک برداری موج (SVG Area Wave Chart) -->
+        <div class="relative w-full h-52 my-2 pt-4">
+          <svg class="w-full h-full overflow-visible" viewBox="0 0 700 180" preserveAspectRatio="none">
+            <defs>
+              <linearGradient id="waveGrad" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#00A693" stop-opacity="0.55"/>
+                <stop offset="65%" stop-color="#FF8A34" stop-opacity="0.15"/>
+                <stop offset="100%" stop-color="#04070d" stop-opacity="0.0"/>
+              </linearGradient>
+              <linearGradient id="lineGrad" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0%" stop-color="#1fe2ba"/>
+                <stop offset="50%" stop-color="#00A693"/>
+                <stop offset="100%" stop-color="#FF8A34"/>
+              </linearGradient>
+            </defs>
+
+            <!-- خطوط راهنمای افقی -->
+            <line x1="0" y1="20" x2="700" y2="20" stroke="rgba(255,255,255,0.07)" stroke-dasharray="4 4"/>
+            <line x1="0" y1="75" x2="700" y2="75" stroke="rgba(255,255,255,0.07)" stroke-dasharray="4 4"/>
+            <line x1="0" y1="130" x2="700" y2="130" stroke="rgba(255,255,255,0.07)" stroke-dasharray="4 4"/>
+            <line x1="0" y1="170" x2="700" y2="170" stroke="rgba(255,255,255,0.18)"/>
+
+            <!-- ناحیه رنگ‌شده زیر نمودار (Area Path) -->
+            <!-- نقاط X (از راست به چپ برای فارسی یا چپ به راست استاندارد): چپ به راست: فروردین(30,105) اردیبهشت(120,18) خرداد(215,44) تیر(310,103) مرداد(405,110) شهریور(500,118) مهر(595,130) آبان(675,127) -->
+            <path d="M 30 105 C 75 60, 90 18, 120 18 C 160 18, 180 44, 215 44 C 260 44, 280 103, 310 103 C 350 103, 375 110, 405 110 C 450 110, 470 118, 500 118 C 545 118, 565 130, 595 130 C 635 130, 655 127, 675 127 L 675 170 L 30 170 Z" fill="url(#waveGrad)"/>
+
+            <!-- خط منحنی اصلی (Smooth Cubic Bezier Line) -->
+            <path d="M 30 105 C 75 60, 90 18, 120 18 C 160 18, 180 44, 215 44 C 260 44, 280 103, 310 103 C 350 103, 375 110, 405 110 C 450 110, 470 118, 500 118 C 545 118, 565 130, 595 130 C 635 130, 655 127, 675 127" fill="none" stroke="url(#lineGrad)" stroke-width="3.5" stroke-linecap="round"/>
+
+            <!-- نقاط داده (Data Nodes) و اعداد بالای هر نقطه -->
+            <!-- فروردین: 45 -->
+            <circle cx="30" cy="105" r="5" fill="#04070d" stroke="#1fe2ba" stroke-width="3"/>
+            <text x="30" y="92" fill="#e2e8f0" font-size="12" font-weight="800" text-anchor="middle">45</text>
+
+            <!-- اردیبهشت: 107 -->
+            <circle cx="120" cy="18" r="6" fill="#00A693" stroke="#ffffff" stroke-width="2.5"/>
+            <text x="120" y="6" fill="#53f5d0" font-size="13" font-weight="900" text-anchor="middle">107</text>
+
+            <!-- خرداد: 88 -->
+            <circle cx="215" cy="44" r="5.5" fill="#04070d" stroke="#1fe2ba" stroke-width="3"/>
+            <text x="215" y="31" fill="#53f5d0" font-size="12" font-weight="800" text-anchor="middle">88</text>
+
+            <!-- تیر: 46 -->
+            <circle cx="310" cy="103" r="5" fill="#04070d" stroke="#00A693" stroke-width="3"/>
+            <text x="310" y="90" fill="#e2e8f0" font-size="12" font-weight="800" text-anchor="middle">46</text>
+
+            <!-- مرداد: 41 -->
+            <circle cx="405" cy="110" r="5" fill="#04070d" stroke="#00A693" stroke-width="3"/>
+            <text x="405" y="97" fill="#e2e8f0" font-size="12" font-weight="800" text-anchor="middle">41</text>
+
+            <!-- شهریور: 36 -->
+            <circle cx="500" cy="118" r="5" fill="#04070d" stroke="#FF8A34" stroke-width="3"/>
+            <text x="500" y="105" fill="#fdba74" font-size="12" font-weight="800" text-anchor="middle">36</text>
+
+            <!-- مهر: 27 -->
+            <circle cx="595" cy="130" r="5" fill="#04070d" stroke="#FF8A34" stroke-width="3"/>
+            <text x="595" y="117" fill="#fdba74" font-size="12" font-weight="800" text-anchor="middle">27</text>
+
+            <!-- آبان: 29 -->
+            <circle cx="675" cy="127" r="5.5" fill="#FF8A34" stroke="#ffffff" stroke-width="2"/>
+            <text x="675" y="114" fill="#ffb171" font-size="12" font-weight="800" text-anchor="middle">29*</text>
+          </svg>
+        </div>
+
+        <!-- محور ماه‌ها (چپ به راست منطبق با نقاط نمودار) -->
+        <div class="grid grid-cols-8 text-center pt-2 text-[11px] font-bold text-slate-300 border-t border-white/5 ss03" dir="ltr">
+          <div>فروردین</div>
+          <div class="text-primary-300 font-black">اردیبهشت</div>
+          <div class="text-primary-300 font-black">خرداد</div>
+          <div>تیر</div>
+          <div>مرداد</div>
+          <div class="text-secondary-300">شهریور</div>
+          <div class="text-secondary-300">مهر</div>
+          <div class="text-secondary-300">آبان (تا ۲۳ام)</div>
+        </div>
+
+      </div>
+
+      <!-- ستون چپ (5 از 12): ماتریس موزاییکی ترکیب خروجی‌ها (Deliverable Mix Treemap Grid) -->
+      <div class="lg:col-span-5 p-6 rounded-3xl bg-surface-900/80 border border-white/10 backdrop-blur-2xl shadow-glass flex flex-col justify-between">
+        
+        <div class="flex items-center justify-between mb-3">
+          <span class="text-xs font-black text-white">ماتریس ترکیب خروجی‌های تخصصی (۴۱۹ تسک)</span>
+          <span class="text-[10px] font-heavy text-secondary-300 bg-secondary-400/15 px-2.5 py-0.5 rounded-full ss03">Treemap Mix</span>
+        </div>
+
+        <!-- شبکه موزاییکی (Treemap Style Cards) -->
+        <div class="grid grid-cols-12 gap-2.5 flex-1 ss03">
+
+          <!-- باکس ۱: طراحی سرویس، یوزرفلو، لندینگ و دیزاین سیستم (93 تسک - 22.2%) -->
+          <div class="col-span-7 p-3.5 rounded-2xl bg-gradient-to-br from-primary-500/25 to-primary-500/5 border border-primary-500/40 flex flex-col justify-between">
+            <div class="flex items-center justify-between">
+              <span class="text-[10px] font-bold text-primary-300">معماری محصول و UX/UI</span>
+              <span class="text-xs font-heavy text-primary-400">22.2%</span>
+            </div>
+            <div class="my-1">
+              <div class="text-2xl font-heavy text-white">93 <span class="text-[11px] font-normal text-slate-300">پروژه و اپیک</span></div>
+            </div>
+            <div class="text-[10px] text-slate-300 leading-snug">
+              ۳۰ طراحی سرویس + ۲۹ یوزرفلو + ۱۹ لندینگ‌پیج[cite: 3, 5, 6] + ۱۵ دیزاین‌سیستم و بنچمارک[cite: 5, 6, 8]
+            </div>
+          </div>
+
+          <!-- باکس ۲: تصویرسازی و گرافیک اپ و وب‌سایت (84 تسک - 20.0%) -->
+          <div class="col-span-5 p-3.5 rounded-2xl bg-gradient-to-br from-secondary-400/25 to-secondary-400/5 border border-secondary-400/40 flex flex-col justify-between">
+            <div class="flex items-center justify-between">
+              <span class="text-[10px] font-bold text-secondary-300">تصویرسازی و بنر اپ</span>
+              <span class="text-xs font-heavy text-secondary-400">20.0%</span>
+            </div>
+            <div class="text-2xl font-heavy text-white my-1">84 <span class="text-[11px] font-normal text-slate-300">تسک</span></div>
+            <div class="text-[10px] text-slate-300 leading-snug">
+              ۴۳ تصویرسازی اختصاصی[cite: 3, 5, 7, 8, 9] + ۴۱ بنر و هدر اپ/وب[cite: 7, 8, 9]
+            </div>
+          </div>
+
+          <!-- باکس ۳: گرافیک سوشال، پوستر، بیلبورد و محیطی (89 تسک - 21.2%) -->
+          <div class="col-span-6 p-3.5 rounded-2xl bg-white/[0.04] border border-white/10 flex flex-col justify-between">
+            <div class="flex items-center justify-between">
+              <span class="text-[10px] font-bold text-sky-300">کمپین، سوشال و بیلبورد</span>
+              <span class="text-xs font-heavy text-sky-400">21.2%</span>
+            </div>
+            <div class="text-xl font-heavy text-white my-0.5">89 <span class="text-[11px] font-normal text-slate-300">تسک</span></div>
+            <div class="text-[10px] text-slate-400 leading-snug">
+              ۶۹ سوشال مدیا[cite: 7, 8, 9] + ۱۵ پوستر/جلد[cite: 2, 7, 8, 9] + ۵ بیلبورد و محیطی[cite: 7, 8]
+            </div>
+          </div>
+
+          <!-- باکس ۴: طراحی کارت، آیکون، لوگو و برندبوک (75 تسک - 17.9%) -->
+          <div class="col-span-6 p-3.5 rounded-2xl bg-white/[0.04] border border-white/10 flex flex-col justify-between">
+            <div class="flex items-center justify-between">
+              <span class="text-[10px] font-bold text-purple-300">کارت، آیکون و هویت بصری</span>
+              <span class="text-xs font-heavy text-purple-400">17.9%</span>
+            </div>
+            <div class="text-xl font-heavy text-white my-0.5">75 <span class="text-[11px] font-normal text-slate-300">تسک</span></div>
+            <div class="text-[10px] text-slate-400 leading-snug">
+              ۲۶ کارت[cite: 2, 8, 9] + ۱۹ آیکون‌پک[cite: 2, 5, 6, 7, 8, 9] + ۱۸ لوگو، برندبوک و صفحه‌آرایی[cite: 8, 9] + ۱۲ اداری/بسته‌بندی[cite: 2, 8, 9]
+            </div>
+          </div>
+
+          <!-- باکس ۵: انیمیشن Lottie، موشن‌گرافیک، بازبینی UI و Design Check (78 تسک - 18.7%) -->
+          <div class="col-span-12 p-3 rounded-2xl bg-gradient-to-l from-primary-500/10 via-white/[0.03] to-secondary-400/10 border border-white/10 flex items-center justify-between">
+            <div>
+              <div class="text-xs font-black text-white">موشن‌گرافیک، Lottie و چرخه‌های بازبینی کیفی (Design Check & Iterations)</div>
+              <div class="text-[10px] text-slate-300 mt-0.5">۱۶ پروژه موشن‌گرافیک و انیمیشن Lottie[cite: 7, 8, 9] + ۶۲ تسک ارتقای UI، دیزاین‌چک و اصلاحات[cite: 2, 3, 5, 6, 7, 8]</div>
+            </div>
+            <div class="text-left shrink-0">
+              <div class="text-lg font-heavy text-primary-300">78 تسک</div>
+              <div class="text-[9px] text-slate-400">18.7% کل خروجی</div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+
+
+            <!-- ==================== داک ناوبری شناور پایین ==================== -->
+  <footer class="fixed bottom-6 right-12 left-12 z-30 flex items-center justify-between pointer-events-none">
+    
+    <div class="pointer-events-auto flex items-center gap-2 bg-surface-900/80 border border-white/10 p-1.5 rounded-2xl backdrop-blur-2xl shadow-glass">
+      <button id="prevBtn" class="px-4 py-2 rounded-xl text-xs font-bold text-slate-300 hover:text-white hover:bg-white/10 transition flex items-center gap-1.5">
+        <span>→</span> قبلی
+      </button>
+      <div class="h-4 w-[1px] bg-white/10"></div>
+      <span id="slideCounter" class="text-xs font-extrabold text-primary-400 px-3 min-w-[65px] text-center ss03">1 از 2</span>
+      <div class="h-4 w-[1px] bg-white/10"></div>
+      <button id="nextBtn" class="px-4 py-2 rounded-xl text-xs font-bold bg-primary-500/20 text-primary-300 border border-primary-500/30 hover:bg-primary-500 hover:text-surface-950 transition flex items-center gap-1.5">
+        بعدی <span>←</span>
+      </button>
+    </div>
+
+    <div id="slideDots" class="pointer-events-auto hidden md:flex items-center gap-2 bg-surface-900/70 border border-white/10 px-4 py-2.5 rounded-full backdrop-blur-xl"></div>
+
+    <div class="pointer-events-auto flex items-center gap-2 bg-surface-900/80 border border-white/10 p-1.5 rounded-2xl backdrop-blur-2xl shadow-glass">
+      <button id="fullscreenBtn" class="px-3.5 py-2 rounded-xl text-xs font-semibold text-slate-300 hover:text-secondary-400 hover:bg-white/5 transition flex items-center gap-2">
+        <span>⛶</span>
+        <span>تمام‌صفحه</span>
+        <kbd class="px-1.5 py-0.5 text-[10px] bg-white/10 rounded text-slate-400 font-sans">F</kbd>
+      </button>
+    </div>
+
+  </footer>
+
+  <script src="js/engine.js"></script>
+</body>
 </html>
