@@ -54,18 +54,20 @@ const tailwindConfig = {
           900: '#090e1a',
           800: '#111827',
           700: '#1e293b',
-        }
+        },
       },
       boxShadow: {
         'glow-primary': '0 0 35px -5px rgba(0, 166, 147, 0.35)',
         'glow-secondary': '0 0 35px -5px rgba(0, 138, 52, 0.35)',
-        'glass': '0 20px 50px rgba(0, 0, 0, 0.5), inset 0 1px 0 0 rgba(255, 255, 255, 0.1)',
+        glass:
+          '0 20px 50px rgba(0, 0, 0, 0.5), inset 0 1px 0 0 rgba(255, 255, 255, 0.1)',
       },
       backgroundImage: {
-        'grid-pattern': 'linear-gradient(to left, rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,0.03) 1px, transparent 1px)',
-      }
-    }
-  }
+        'grid-pattern':
+          'linear-gradient(to left, rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,0.03) 1px, transparent 1px)',
+      },
+    },
+  },
 };
 
 if (typeof window !== 'undefined') {
