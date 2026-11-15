@@ -1,4 +1,4 @@
-/* ۱. بارگذاری فونت متغیر IRANYekanXVF با پشتیبانی از تمام فرمت‌ها */
+/* ۱. بارگذاری همان فونت موجود در پروژه بدون نیاز به فایل جدید */
 @font-face {
   font-family: 'IRANYekanXVF';
   src:
@@ -8,12 +8,12 @@
     url('../assets/fonts/IRANYekanXVF.woff') format('woff'),
     url('../assets/fonts/IRANYekanXVF.ttf') format('truetype-variations'),
     url('../assets/fonts/IRANYekanXVF.ttf') format('truetype');
-  font-weight: 100 950;
+  font-weight: 100 900;
   font-style: normal;
   font-display: swap;
 }
 
-/* ۲. فعال‌سازی سراسری اعداد فارسی (ss02) و حروف جایگزین (ss04) در کل پروژه */
+/* ۲. ظاهر ساده و رسمی حروف (حذف ss04) + فعال‌سازی فقط اعداد فارسی (ss02) + رندرینگ ظریف */
 html,
 body {
   font-family:
@@ -21,76 +21,72 @@ body {
     system-ui,
     -apple-system,
     sans-serif;
-  -moz-font-feature-settings: 'ss02', 'ss04';
-  -webkit-font-feature-settings: 'ss02', 'ss04';
-  font-feature-settings: 'ss02', 'ss04';
+  /* فقط اعداد فارسی؛ حذف ss04 برای ساده‌شدن فرم حروف */
+  -moz-font-feature-settings: 'ss02';
+  -webkit-font-feature-settings: 'ss02';
+  font-feature-settings: 'ss02';
+  /* جلوگیری از ضخیم و زبر شدن فونت روی پس‌زمینه تیره */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
-/* ۳. کلاس‌های اختصاصی راهنمای فونت (قابل استفاده در هر جای HTML) */
-
-/* فقط فارسی‌ساز اعداد */
+/* ۳. کلاس‌های راهنمای فونت (بدون حروف فانتزی ss04) */
 .ss02 {
   -moz-font-feature-settings: 'ss02';
   -webkit-font-feature-settings: 'ss02';
   font-feature-settings: 'ss02';
 }
 
-/* اعداد فارسی + هم‌عرض (Monospace) مخصوص جداول، KPIها و شمارنده‌ها */
 .ss03,
 .tabular-nums {
-  -moz-font-feature-settings: 'ss02', 'ss03', 'ss04';
-  -webkit-font-feature-settings: 'ss02', 'ss03', 'ss04';
-  font-feature-settings: 'ss02', 'ss03', 'ss04';
+  /* فقط اعداد فارسی و هم‌عرض برای جداول و KPIها */
+  -moz-font-feature-settings: 'ss02', 'ss03';
+  -webkit-font-feature-settings: 'ss02', 'ss03';
+  font-feature-settings: 'ss02', 'ss03';
 }
 
-/* حروف جایگزین */
-.ss04 {
-  -moz-font-feature-settings: 'ss02', 'ss04';
-  -webkit-font-feature-settings: 'ss02', 'ss04';
-  font-feature-settings: 'ss02', 'ss04';
-}
-
-/* ۴. اتصال دقیق کلاس‌های وزن Tailwind به موتور Variable Font (محور wght) */
+/* ۴. تعدیل و ساده‌سازی وزن‌ها (حذف ضخامت‌های افراطی 900 و 950) */
 .font-thin {
-  font-weight: 100;
-  font-variation-settings: 'wght' 100;
-}
-.font-extralight {
   font-weight: 200;
   font-variation-settings: 'wght' 200;
 }
-.font-light {
+.font-extralight {
   font-weight: 300;
   font-variation-settings: 'wght' 300;
+}
+.font-light {
+  font-weight: 350;
+  font-variation-settings: 'wght' 350;
 }
 .font-normal {
   font-weight: 400;
   font-variation-settings: 'wght' 400;
 }
 .font-medium {
-  font-weight: 500;
-  font-variation-settings: 'wght' 500;
+  font-weight: 450;
+  font-variation-settings: 'wght' 450;
 }
 .font-semibold {
+  font-weight: 550;
+  font-variation-settings: 'wght' 550;
+}
+.font-bold {
   font-weight: 600;
   font-variation-settings: 'wght' 600;
 }
-.font-bold {
+.font-extrabold {
+  font-weight: 650;
+  font-variation-settings: 'wght' 650;
+}
+.font-black {
   font-weight: 700;
   font-variation-settings: 'wght' 700;
 }
-.font-extrabold {
-  font-weight: 800;
-  font-variation-settings: 'wght' 800;
-}
-.font-black {
-  font-weight: 900;
-  font-variation-settings: 'wght' 900;
-}
 .font-heavy {
-  font-weight: 950;
-  font-variation-settings: 'wght' 950;
-} /* وزن فوق سنگین برای تیترهای اصلی */
+  font-weight: 750;
+  font-variation-settings: 'wght' 750;
+} /* متعادل و شیک به جای وزن فوق‌سنگین 950 */
 
 /* ۵. انیمیشن‌های موتور پرزنتیشن و کارت‌ها */
 .slide {
@@ -119,15 +115,15 @@ body {
   padding-bottom: 2.5rem;
 }
 
-/* اضافه کردن به بخش <style> در بالای فایل HTML برای استاندارد فونت فارسی */
+/* ۶. استاندارد فاصله خطوط فارسی */
 p,
 li,
 .leading-persian {
-  line-height: 1.75 !important; /* معادل 175% برای خوانایی عالی متون دوخطی فارسی */
+  line-height: 1.75 !important;
 }
 h1,
 h2,
 h3,
 h4 {
-  line-height: 1.55 !important; /* معادل 155% برای تیترهای بزرگ فارسی */
+  line-height: 1.55 !important;
 }
